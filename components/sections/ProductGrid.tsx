@@ -113,9 +113,9 @@ export function ProductGrid() {
             </ul>
           </CardContent>
           <CardFooter>
-            <Button asChild variant="outline" className="w-full">
-              <Link href="#">Get updates</Link>
-            </Button>
+            <p className="text-xs text-muted-foreground w-full text-center italic">
+              Coming soon
+            </p>
           </CardFooter>
         </Card>
       </div>

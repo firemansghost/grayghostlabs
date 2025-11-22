@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ProductGrid } from "@/components/sections/ProductGrid";
+import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { buildMetadata } from "@/lib/seo";
 
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <ProductGrid />
+      <NewsletterCTA />
       <AboutSection />
     </>
   );

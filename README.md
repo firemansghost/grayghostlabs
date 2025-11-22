@@ -69,4 +69,3 @@ npm run build
 ## Deploy
 
 The site is ready to deploy to Vercel, Netlify, or any platform that supports Next.js.
-

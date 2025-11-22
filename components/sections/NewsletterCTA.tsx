@@ -13,9 +13,9 @@ export function NewsletterCTA() {
             </h2>
             <p className="text-sm text-muted-foreground">
               A mostly-weekly rundown of macro, Bitcoin, markets, and whatever
-              blew up in the news this week—plus the occasional sports model rant.
-              Charts, receipts, and a bit of gallows humor from the same brain
-              that built GhostGauge and Gridiron Edge.
+              blew up this week—plus the occasional sports model rant. Charts,
+              receipts, and gallows humor from the same brain that built
+              GhostGauge and Gridiron Edge.
             </p>
             <p className="text-xs text-muted-foreground italic">
               The only newsletter where geopolitics and gallows humor collide

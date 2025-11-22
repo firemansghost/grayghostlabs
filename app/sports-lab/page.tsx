@@ -56,7 +56,11 @@ export default function SportsLabPage() {
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row gap-2">
             <Button asChild className="w-full sm:w-auto">
-              <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
+              <Link
+                href={EXTERNAL_LINKS.gridironEdgeApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Launch Gridiron Edge – CFB
               </Link>
             </Button>

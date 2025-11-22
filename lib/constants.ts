@@ -1,14 +1,11 @@
-import { siteConfig } from "@/config/site";
+export const SITE_URL = "https://www.grayghostlabs.com" as const;
 
 export const EXTERNAL_LINKS = {
-  ghostGauge: "https://ghostgauge.com",
-  ghostEdgeCFB: "https://gridiron-edge-v1.vercel.app",
-  twitter: siteConfig.links.x,
-  substack: siteConfig.links.newsletter,
-  x: siteConfig.links.x,
-  newsletter: siteConfig.links.newsletter,
-  email: siteConfig.links.email,
+  ghostGaugeApp: "https://www.ghostgauge.com",
+  gridironEdgeApp: "https://gridiron-edge-v1.vercel.app",
+  substack: "https://grayghost.substack.com",
+  x: "https://x.com/GrayGhost",
 } as const;
 
-export const SITE_NAME = siteConfig.name;
-
+// Legacy aliases for backward compatibility (can be removed later)
+export const SITE_NAME = "GrayGhost Labs";

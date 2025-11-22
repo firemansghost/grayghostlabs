@@ -34,7 +34,11 @@ export function ProductGrid() {
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row gap-2">
             <Button asChild className="w-full sm:w-auto">
-              <Link href={EXTERNAL_LINKS.ghostGauge} target="_blank">
+              <Link
+                href={EXTERNAL_LINKS.ghostGaugeApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Launch app
               </Link>
             </Button>
@@ -70,7 +74,11 @@ export function ProductGrid() {
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row gap-2">
             <Button asChild className="w-full sm:w-auto">
-              <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
+              <Link
+                href={EXTERNAL_LINKS.gridironEdgeApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Current week slate
               </Link>
             </Button>

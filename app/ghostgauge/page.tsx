@@ -106,7 +106,11 @@ export default function GhostGaugePage() {
           <Card className="w-full max-w-md">
             <CardContent className="p-8 space-y-6 text-center">
               <Button asChild size="lg" className="w-full">
-                <Link href={EXTERNAL_LINKS.ghostGauge} target="_blank">
+                <Link
+                  href={EXTERNAL_LINKS.ghostGaugeApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Open GhostGauge
                 </Link>
               </Button>

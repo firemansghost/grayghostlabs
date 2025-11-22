@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
@@ -14,7 +15,7 @@ export function SiteFooter() {
           </p>
           <div className="flex items-center space-x-6">
             <Link
-              href={siteConfig.links.x}
+              href={EXTERNAL_LINKS.x}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -22,7 +23,7 @@ export function SiteFooter() {
               X / Twitter
             </Link>
             <Link
-              href={siteConfig.links.newsletter}
+              href={EXTERNAL_LINKS.substack}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"

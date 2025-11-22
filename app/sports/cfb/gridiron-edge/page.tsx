@@ -135,7 +135,11 @@ export default function GridironEdgeCFBPage() {
           <Card className="w-full max-w-md">
             <CardContent className="p-8 space-y-6 text-center">
               <Button asChild size="lg" className="w-full">
-                <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
+                <Link
+                  href={EXTERNAL_LINKS.gridironEdgeApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Open Gridiron Edge – CFB
                 </Link>
               </Button>
@@ -152,4 +156,5 @@ export default function GridironEdgeCFBPage() {
     </div>
   );
 }
+
 

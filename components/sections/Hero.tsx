@@ -23,12 +23,20 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">
-              <Link href={EXTERNAL_LINKS.ghostGauge} target="_blank">
+              <Link
+                href={EXTERNAL_LINKS.ghostGaugeApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Open GhostGauge
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
+              <Link
+                href={EXTERNAL_LINKS.gridironEdgeApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Open Gridiron Edge – CFB
               </Link>
             </Button>

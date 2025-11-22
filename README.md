@@ -7,7 +7,7 @@ Marketing + hub site for GrayGhost Labs (GhostGauge, Gridiron Edge, etc.)
 This is the marketing and hub site for GrayGhost Labs, serving as the front door to the "Ghost" ecosystem:
 
 - **GrayGhost Labs** (parent brand)
-- **GhostGauge** (Bitcoin risk dashboard – https://ghostgauge.com)
+- **GhostGauge** (Bitcoin risk dashboard – https://www.ghostgauge.com)
 - **Gridiron Edge – CFB** (College football model – https://gridiron-edge-v1.vercel.app)
 
 ## Tech Stack

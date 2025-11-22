@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -86,7 +87,7 @@ export default function AboutPage() {
           <p className="text-foreground/80">
             Find me on{" "}
             <Link
-              href={siteConfig.links.x}
+              href={EXTERNAL_LINKS.x}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"

@@ -75,6 +75,37 @@ export default function GhostGaugePage() {
           </ul>
         </section>
 
+        {/* How it works */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">How it works</h2>
+          <p className="text-sm text-muted-foreground">
+            Under the hood, GhostGauge blends several pillars into a single BTC
+            G-Score: liquidity and flows, momentum and valuation, term structure
+            and leverage, macro context, and social/attention. Each pillar is
+            scored versus its own history and then combined into a 0–100 read on
+            how stretched or washed-out conditions look today.
+          </p>
+          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+            <li>
+              Liquidity &amp; flows – stablecoins, ETF flows, and liquidity
+              proxies
+            </li>
+            <li>
+              Momentum &amp; valuation – trend vs long-term baselines and cycle
+              position
+            </li>
+            <li>
+              Term structure &amp; leverage – derivatives, funding, and stress
+              in the curve
+            </li>
+            <li>Macro overlay – broader liquidity and rates regime</li>
+            <li>
+              Social &amp; attention – narrative and sentiment as a supporting
+              input
+            </li>
+          </ul>
+        </section>
+
         {/* How to Use Section */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">How to Use</h2>
@@ -105,15 +136,26 @@ export default function GhostGaugePage() {
         <section className="flex justify-center">
           <Card className="w-full max-w-md">
             <CardContent className="p-8 space-y-6 text-center">
-              <Button asChild size="lg" className="w-full">
-                <Link
-                  href={EXTERNAL_LINKS.ghostGaugeApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open GhostGauge
-                </Link>
-              </Button>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Button asChild size="lg">
+                  <Link
+                    href={EXTERNAL_LINKS.ghostGaugeApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open GhostGauge
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link
+                    href={EXTERNAL_LINKS.ghostGaugeMethodology}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read methodology
+                  </Link>
+                </Button>
+              </div>
               <Link
                 href="/"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"

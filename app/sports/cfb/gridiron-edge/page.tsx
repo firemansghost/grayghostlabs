@@ -93,6 +93,35 @@ export default function GridironEdgeCFBPage() {
           </div>
         </section>
 
+        {/* Under the hood */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">Under the hood</h2>
+          <p className="text-sm text-muted-foreground">
+            Gridiron Edge runs a multi-model setup: a Balanced Composite power
+            rating (V1), a unit matchup model (V2), and a Hybrid blend. V1 looks
+            at talent, efficiency, scoring, and results. V2 grades run and pass
+            units head-to-head. The Hybrid model leans on the composite and
+            layers in matchup context so projections don&apos;t blow up every
+            time one team has a weird box score.
+          </p>
+          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+            <li>
+              V1 Balanced Composite – 25% talent, 25% efficiency, 25% scoring,
+              25% results
+            </li>
+            <li>
+              V2 Matchup model – run/pass and explosiveness matchups at the unit
+              level
+            </li>
+            <li>
+              Hybrid model – weighted blend of V1 and V2 for more stable edges
+            </li>
+            <li>
+              Inputs from CFBD, odds feeds, and weather data for context
+            </li>
+          </ul>
+        </section>
+
         {/* Who It's For */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Who It&apos;s For</h2>
@@ -134,15 +163,26 @@ export default function GridironEdgeCFBPage() {
         <section className="flex justify-center">
           <Card className="w-full max-w-md">
             <CardContent className="p-8 space-y-6 text-center">
-              <Button asChild size="lg" className="w-full">
-                <Link
-                  href={EXTERNAL_LINKS.gridironEdgeApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open Gridiron Edge – CFB
-                </Link>
-              </Button>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Button asChild size="lg">
+                  <Link
+                    href={EXTERNAL_LINKS.gridironEdgeApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open Gridiron Edge – CFB
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link
+                    href={EXTERNAL_LINKS.gridironEdgeMethodology}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read methodology
+                  </Link>
+                </Button>
+              </div>
               <Link
                 href="/sports-lab"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"

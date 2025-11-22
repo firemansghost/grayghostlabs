@@ -3,11 +3,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Sports Lab | GrayGhost Labs",
-  description: "Power ratings, edges vs the market, and season-long PnL tracking for college football and other sports.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Sports Lab – Where Numbers Talk Trash",
+  description:
+    "The Sports Lab is where Gridiron Edge and future sports models live: power ratings, edges vs the market, and season-long tracking.",
+  path: "/sports-lab",
+});
 
 export default function SportsLabPage() {
   return (

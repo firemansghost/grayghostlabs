@@ -3,11 +3,14 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About | GrayGhost Labs",
-  description: "Learn about GrayGhost Labs, a one-person lab building data-driven tools for Bitcoin, sports, and more.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "About GrayGhost Labs",
+  description:
+    "GrayGhost Labs is a one-person lab built by a stubborn firefighter who mixes fire service experience, macro analysis, and sports models into oddly useful tools.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

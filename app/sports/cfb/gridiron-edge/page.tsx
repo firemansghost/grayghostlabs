@@ -3,11 +3,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Gridiron Edge – College Football | GrayGhost Labs",
-  description: "Power ratings, spreads, totals, and result tracking for college football betting and analysis.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Gridiron Edge – College Football Analytics",
+  description:
+    "Model-driven power ratings, projected spreads/totals, and PnL tracking for college football sickos who want to test betting ideas against real numbers.",
+  path: "/sports/cfb/gridiron-edge",
+});
 
 export default function GridironEdgeCFBPage() {
   return (

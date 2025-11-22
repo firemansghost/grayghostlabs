@@ -3,11 +3,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "GhostGauge – Bitcoin Risk Dashboard | GrayGhost Labs",
-  description: "A single 0-100 risk score for Bitcoin that combines macro, flows, momentum, and structure.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "GhostGauge – Bitcoin Risk Dashboard",
+  description:
+    "GhostGauge wraps Bitcoin's macro, flow, and sentiment signals into a single 0–100 BTC G-Score with simple risk bands built for DCA and sanity checks.",
+  path: "/ghostgauge",
+});
 
 export default function GhostGaugePage() {
   return (

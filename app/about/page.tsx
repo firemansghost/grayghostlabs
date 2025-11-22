@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import { EXTERNAL_LINKS } from "@/lib/constants";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "About | GrayGhost Labs",
@@ -86,14 +86,16 @@ export default function AboutPage() {
           <p className="text-foreground/80">
             Find me on{" "}
             <Link
-              href={EXTERNAL_LINKS.twitter}
+              href={siteConfig.links.x}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-primary hover:underline"
             >
               X
             </Link>{" "}
             or reach out via{" "}
             <Link
-              href={EXTERNAL_LINKS.email}
+              href={siteConfig.links.email}
               className="text-primary hover:underline"
             >
               email

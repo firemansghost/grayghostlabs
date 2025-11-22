@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EXTERNAL_LINKS } from "@/lib/constants";
+import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -14,19 +14,23 @@ export function SiteFooter() {
           </p>
           <div className="flex items-center space-x-6">
             <Link
-              href={EXTERNAL_LINKS.twitter}
+              href={siteConfig.links.x}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               X / Twitter
             </Link>
             <Link
-              href={EXTERNAL_LINKS.substack}
+              href={siteConfig.links.newsletter}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Substack
+              Newsletter
             </Link>
             <Link
-              href={EXTERNAL_LINKS.email}
+              href={siteConfig.links.email}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Email

@@ -1,13 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import { mainNav, externalNav } from "@/lib/nav";
+import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -17,40 +32,32 @@ export function SiteHeader() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <Link
-            href="/"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Home
-          </Link>
-          <div className="relative group">
-            <button className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-              Products
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-48 rounded-md border border-border bg-card shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="py-2">
-                <Link
-                  href="/ghostgauge"
-                  className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
-                >
-                  GhostGauge
-                </Link>
-                <Link
-                  href="/sports-lab"
-                  className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
-                >
-                  Sports Lab
-                </Link>
-              </div>
-            </div>
-          </div>
-          <Link
-            href="/about"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            About
-          </Link>
+        <nav className="hidden md:flex items-center gap-6">
+          {mainNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",
+                isActive(item.href) &&
+                  "text-foreground underline underline-offset-4"
+              )}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="h-4 w-px bg-border mx-2" />
+          {externalNav.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors opacity-80 hover:opacity-100"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -72,43 +79,35 @@ export function SiteHeader() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-card">
           <div className="container px-4 py-4 space-y-2">
-            <Link
-              href="/"
-              className="block py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <div className="py-2">
-              <div className="text-sm font-medium text-foreground/60 mb-2">
-                Products
-              </div>
+            {mainNav.map((item) => (
               <Link
-                href="/ghostgauge"
-                className="block py-2 pl-4 text-sm text-foreground/80 hover:text-foreground"
-                onClick={() => setMobileMenuOpen(false)}
+                key={item.href}
+                href={item.href}
+                onClick={closeMobileMenu}
+                className={cn(
+                  "block py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",
+                  isActive(item.href) && "text-foreground font-semibold"
+                )}
               >
-                GhostGauge
+                {item.label}
               </Link>
+            ))}
+            <div className="h-px bg-border my-2" />
+            {externalNav.map((item) => (
               <Link
-                href="/sports-lab"
-                className="block py-2 pl-4 text-sm text-foreground/80 hover:text-foreground"
-                onClick={() => setMobileMenuOpen(false)}
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMobileMenu}
+                className="block py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors opacity-80 hover:opacity-100"
               >
-                Sports Lab
+                {item.label}
               </Link>
-            </div>
-            <Link
-              href="/about"
-              className="block py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
+            ))}
           </div>
         </div>
       )}
     </header>
   );
 }
-

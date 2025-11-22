@@ -5,18 +5,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "GhostEdge – College Football | GrayGhost Labs",
+  title: "Gridiron Edge – College Football | GrayGhost Labs",
   description: "Power ratings, spreads, totals, and result tracking for college football betting and analysis.",
 };
 
-export default function GhostEdgeCFBPage() {
+export default function GridironEdgeCFBPage() {
   return (
     <div className="container px-4 py-16">
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
-            GhostEdge – College Football
+            Gridiron Edge – College Football
           </h1>
           <p className="text-xl text-muted-foreground">
             Power ratings, spreads, totals, and result tracking for the sickos
@@ -29,7 +29,7 @@ export default function GhostEdgeCFBPage() {
           <h2 className="text-2xl font-bold">What It Does</h2>
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
-              GhostEdge – CFB ingests schedule, odds, and results to compute
+              Gridiron Edge – CFB ingests schedule, odds, and results to compute
               power ratings and model spreads/totals. It compares model lines vs
               market and surfaces ATS/OU &quot;edges&quot; that might actually
               mean something.
@@ -136,7 +136,7 @@ export default function GhostEdgeCFBPage() {
             <CardContent className="p-8 space-y-6 text-center">
               <Button asChild size="lg" className="w-full">
                 <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
-                  Open GhostEdge – CFB
+                  Open Gridiron Edge – CFB
                 </Link>
               </Button>
               <Link

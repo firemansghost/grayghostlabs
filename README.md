@@ -1,6 +1,6 @@
 # GrayGhost Labs
 
-Marketing + hub site for GrayGhost Labs (GhostGauge, GhostEdge, etc.)
+Marketing + hub site for GrayGhost Labs (GhostGauge, Gridiron Edge, etc.)
 
 ## Overview
 
@@ -8,7 +8,7 @@ This is the marketing and hub site for GrayGhost Labs, serving as the front door
 
 - **GrayGhost Labs** (parent brand)
 - **GhostGauge** (Bitcoin risk dashboard – https://ghostgauge.com)
-- **GhostEdge – CFB** (College football model – https://gridiron-edge-v1.vercel.app)
+- **Gridiron Edge – CFB** (College football model – https://gridiron-edge-v1.vercel.app)
 
 ## Tech Stack
 
@@ -41,7 +41,7 @@ npm run dev
 │   ├── globals.css         # Global styles
 │   ├── ghostgauge/         # GhostGauge product page
 │   ├── sports-lab/         # Sports Lab overview
-│   ├── sports/cfb/ghostedge/ # GhostEdge-CFB product page
+│   ├── sports/cfb/gridiron-edge/ # Gridiron Edge-CFB product page
 │   └── about/              # About page
 ├── components/
 │   ├── layout/             # SiteHeader, SiteFooter
@@ -57,7 +57,7 @@ npm run dev
 - `/` - Home page with hero, product grid, and about section
 - `/ghostgauge` - GhostGauge product page
 - `/sports-lab` - Sports Lab overview page
-- `/sports/cfb/ghostedge` - GhostEdge-CFB product page
+- `/sports/cfb/gridiron-edge` - Gridiron Edge-CFB product page
 - `/about` - About page
 
 ## Build

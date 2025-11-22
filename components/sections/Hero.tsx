@@ -29,7 +29,7 @@ export function Hero() {
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
-                Open GhostEdge – CFB
+                Open Gridiron Edge – CFB
               </Link>
             </Button>
           </div>

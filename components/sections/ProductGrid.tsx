@@ -44,10 +44,10 @@ export function ProductGrid() {
           </CardFooter>
         </Card>
 
-        {/* GhostEdge – CFB Card */}
+        {/* Gridiron Edge – CFB Card */}
         <Card>
           <CardHeader>
-            <CardTitle>GhostEdge – College Football</CardTitle>
+            <CardTitle>Gridiron Edge – College Football</CardTitle>
             <CardDescription>
               Model-driven spreads, totals, and season-long PnL tracking.
             </CardDescription>

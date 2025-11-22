@@ -26,10 +26,10 @@ export default function SportsLabPage() {
           </p>
         </div>
 
-        {/* Featured GhostEdge – CFB Card */}
+        {/* Featured Gridiron Edge – CFB Card */}
         <Card className="border-2 border-primary/20">
           <CardHeader>
-            <CardTitle className="text-2xl">GhostEdge – College Football</CardTitle>
+            <CardTitle className="text-2xl">Gridiron Edge – College Football</CardTitle>
             <CardDescription className="text-base">
               Power ratings, spreads, totals, and result tracking for the sickos
               who bet Wednesday MACtion.
@@ -57,11 +57,11 @@ export default function SportsLabPage() {
           <CardFooter className="flex flex-col sm:flex-row gap-2">
             <Button asChild className="w-full sm:w-auto">
               <Link href={EXTERNAL_LINKS.ghostEdgeCFB} target="_blank">
-                Launch GhostEdge – CFB
+                Launch Gridiron Edge – CFB
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/sports/cfb/ghostedge">Learn more</Link>
+              <Link href="/sports/cfb/gridiron-edge">Learn more</Link>
             </Button>
           </CardFooter>
         </Card>

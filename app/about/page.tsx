@@ -36,6 +36,30 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Who is GrayGhost? */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">Who is GrayGhost?</h2>
+          <p className="text-sm text-muted-foreground">
+            GrayGhost is the pen name for a stubborn Oklahoma City firefighter who
+            spends off days buried in macro charts, Bitcoin data, and college
+            football box scores. By day it&apos;s fire trucks and medical calls; by
+            night it&apos;s spreadsheets, models, and asking why the market or the
+            oddsmakers just did what they did.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            The persona is simple: take the curiosity of a markets nerd, the dark
+            humor of someone who&apos;s seen too many bad days, and the skepticism
+            of a noir detective who assumes every story—from governments to markets
+            to models—is leaving something out.
+          </p>
+          <p className="text-sm italic text-muted-foreground">
+            &quot;In life, there are no black and white answers, only shades of
+            gray.&quot; That&apos;s the working assumption behind GrayGhost Labs: the
+            tools don&apos;t promise certainty, they just try to make the uncertainty
+            a little more honest.
+          </p>
+        </section>
+
         {/* Philosophy */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Philosophy</h2>
@@ -82,6 +106,43 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
+        </section>
+
+        {/* How the tools are built */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">How the tools are built</h2>
+          <p className="text-sm text-muted-foreground">
+            Every project in GrayGhost Labs starts as a personal annoyance: a
+            question that&apos;s hard to answer, data that&apos;s annoying to pull, or
+            a problem that keeps showing up at work or in the markets. The workflow is
+            the same every time:
+          </p>
+          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+            <li>
+              Start with the real question – What decision am I trying to make, or
+              what lie is the chart telling me?
+            </li>
+            <li>
+              Collect boring but reliable data – Market feeds, public stats, or
+              internal records.
+            </li>
+            <li>
+              Build a simple, testable model – Something that can be checked against
+              history, not just vibes.
+            </li>
+            <li>
+              Track results over time – If it doesn&apos;t hold up, fix it or throw
+              it away.
+            </li>
+            <li>
+              Only then put a UI on top – Once it&apos;s useful, it becomes a
+              GhostGauge view, a Gridiron Edge screen, or some other ghost utility.
+            </li>
+          </ul>
+          <p className="text-sm text-muted-foreground">
+            If something makes it onto this site, it&apos;s because it earned its
+            keep first on the builder&apos;s own time and money.
+          </p>
         </section>
 
         {/* Contact */}

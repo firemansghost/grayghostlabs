@@ -186,12 +186,17 @@ export default function GridironEdgeCFBPage() {
                   </Link>
                 </Button>
               </div>
-              <Link
-                href="/sports-lab"
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Back to Sports Lab
-              </Link>
+              <div className="mt-6">
+                <Link
+                  href="/sports-lab"
+                  className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors"
+                >
+                  <span aria-hidden="true" className="mr-1">
+                    ←
+                  </span>
+                  Back to Sports Lab
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </section>

@@ -159,12 +159,17 @@ export default function GhostGaugePage() {
                   </Link>
                 </Button>
               </div>
-              <Link
-                href="/"
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Back to GrayGhost Labs
-              </Link>
+              <div className="mt-6">
+                <Link
+                  href="/"
+                  className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors"
+                >
+                  <span aria-hidden="true" className="mr-1">
+                    ←
+                  </span>
+                  Back to GrayGhost Labs
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </section>

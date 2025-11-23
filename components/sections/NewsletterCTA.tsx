@@ -12,8 +12,8 @@ export function NewsletterCTA() {
               Newsletter – This Week in Macro Mayhem
             </h2>
             <p className="text-sm text-muted-foreground">
-              A mostly-weekly rundown of macro, Bitcoin, markets, and whatever
-              blew up this week—plus the occasional sports model rant. Charts,
+              A weekly-ish rundown of macro, Bitcoin, markets, and whatever
+              blew up in the news this week, plus the occasional sports model rant. Charts,
               receipts, and gallows humor from the same brain that built
               GhostGauge and Gridiron Edge.
             </p>

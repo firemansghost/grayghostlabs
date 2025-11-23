@@ -92,9 +92,14 @@ export function ProductGrid() {
         <Card>
           <CardHeader>
             <CardTitle>Other Experiments</CardTitle>
-            <CardDescription>
-              Ghost projects that may or may not ruin some actuary&apos;s day.
-            </CardDescription>
+            <div className="space-y-2">
+              <p className="text-sm text-muted-foreground">
+                Ghost projects that may or may not ruin some actuary&apos;s day.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Basically a junk drawer for ideas that annoyed me so much they turned into software.
+              </p>
+            </div>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm text-foreground/80">

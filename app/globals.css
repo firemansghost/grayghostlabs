@@ -51,6 +51,11 @@
       0 18px 45px rgba(0, 0, 0, 0.7),
       0 0 0 1px rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(16px);
+    transition:
+      transform 180ms ease-out,
+      box-shadow 180ms ease-out,
+      border-color 180ms ease-out,
+      background-color 180ms ease-out;
   }
 
   .glass-panel-subtle {
@@ -61,6 +66,23 @@
       0 12px 30px rgba(0, 0, 0, 0.5),
       0 0 0 1px rgba(15, 23, 42, 0.9);
     backdrop-filter: blur(12px);
+    transition:
+      transform 180ms ease-out,
+      box-shadow 180ms ease-out,
+      border-color 180ms ease-out,
+      background-color 180ms ease-out;
+  }
+
+  .glass-panel:hover,
+  .glass-panel:focus-within,
+  .glass-panel-subtle:hover,
+  .glass-panel-subtle:focus-within {
+    transform: translateY(-2px);
+    box-shadow:
+      0 22px 55px rgba(0, 0, 0, 0.85),
+      0 0 0 1px rgba(37, 99, 235, 0.35);
+    border-color: rgba(148, 163, 184, 0.45);
+    background-color: rgba(10, 18, 36, 0.96);
   }
 }
 

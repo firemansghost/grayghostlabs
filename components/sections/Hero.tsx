@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export function Hero() {
@@ -44,8 +43,7 @@ export function Hero() {
         </div>
 
         {/* Console Card */}
-        <Card className="bg-card/50 border-accent/20">
-          <CardContent className="p-6 font-mono text-sm">
+        <div className="glass-panel-subtle p-6 font-mono text-sm">
             <div className="space-y-2 text-foreground/90">
               <div className="text-accent">Ghost Products Online:</div>
               <div className="pl-4 space-y-1">
@@ -63,8 +61,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
+        </div>
       </div>
     </section>
   );

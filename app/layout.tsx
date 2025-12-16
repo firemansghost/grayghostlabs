@@ -14,6 +14,10 @@ export const metadata: Metadata = {
       "GrayGhost Labs is a small collection of obsessively-built tools for markets and sports: Bitcoin risk dashboards, college football models, and other experiments that probably took way too many hours.",
   }),
   manifest: "/manifest.webmanifest",
+  icons: {
+    icon: "/icons/icon-192.png",
+    apple: "/apple-touch-icon.png",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",

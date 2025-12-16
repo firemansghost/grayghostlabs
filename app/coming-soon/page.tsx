@@ -19,8 +19,9 @@ export default function ComingSoonPage() {
             Coming Soon: Weapons-Grade Curiosity
           </h1>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            This is the roadmap. Projects that keep annoying me eventually get
-            built. No timelines, no promises—just what&apos;s cooking.
+            A list of future tools, inspired by chaos, built on caffeine. No
+            timelines - just the next problems I&apos;m dumb enough to try
+            solving.
           </p>
         </div>
 

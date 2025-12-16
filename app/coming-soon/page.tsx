@@ -20,7 +20,7 @@ export default function ComingSoonPage() {
           </h1>
           <p className="text-lg text-foreground/80 leading-relaxed">
             A list of future tools, inspired by chaos, built on caffeine. No
-            timelines - just the next problems I&apos;m dumb enough to try
+            timelines — just the next problems I&apos;m dumb enough to try
             solving.
           </p>
         </div>

@@ -7,7 +7,7 @@ export function ProductGrid() {
   return (
     <section className="container px-4 py-16">
       <h2 className="text-3xl font-bold mb-8 text-center">Ghost Products</h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* GhostGauge Card */}
         <Card>
           <CardHeader>
@@ -44,6 +44,46 @@ export function ProductGrid() {
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
               <Link href="/ghostgauge">Learn more</Link>
+            </Button>
+          </CardFooter>
+        </Card>
+
+        {/* Ghost Allocator Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Ghost Allocator</CardTitle>
+            <CardDescription>
+              Pension-aware portfolio builder for a post-60/40 world. Maps a modern sleeve model onto your real 457 options (Voya + Schwab).
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Pension / income-floor aware</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Sleeve-based allocation (post-60/40)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Maps to Voya core funds + Schwab ETFs</span>
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter className="flex flex-col sm:flex-row gap-2">
+            <Button asChild className="w-full sm:w-auto">
+              <Link
+                href={EXTERNAL_LINKS.ghostAllocatorApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Launch app
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="w-full sm:w-auto">
+              <Link href="/ghost-allocator">Learn more</Link>
             </Button>
           </CardFooter>
         </Card>
@@ -103,10 +143,6 @@ export function ProductGrid() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm text-foreground/80">
-              <li className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span>Firefighters&apos; 457 / retirement tools</span>
-              </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
                 <span>Medical bill dispute helper</span>

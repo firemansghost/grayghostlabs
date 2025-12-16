@@ -19,7 +19,7 @@ export default function ComingSoonPage() {
             Coming Soon: Weapons-Grade Curiosity
           </h1>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            A list of future tools, inspired by chaos, built on caffeine. No
+            A list of future tools. Born in chaos. Assembled with caffeine. No
             timelines — just the next problems I&apos;m dumb enough to try
             solving.
           </p>

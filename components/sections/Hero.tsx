@@ -4,7 +4,7 @@ import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="container px-4 py-16 md:py-24">
+    <section className="container px-4 py-10 sm:py-14 md:py-24">
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
@@ -20,8 +20,8 @@ export function Hero() {
             models, and other experiments that probably took way too many hours.
             No hype—just numbers, edges, and a bit of gallows humor.
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-            <Button asChild size="lg">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <Link
                 href={EXTERNAL_LINKS.ghostGaugeApp}
                 target="_blank"
@@ -30,7 +30,7 @@ export function Hero() {
                 Open GhostGauge
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link
                 href={EXTERNAL_LINKS.ghostAllocatorApp}
                 target="_blank"
@@ -39,7 +39,7 @@ export function Hero() {
                 Open Ghost Allocator
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link
                 href={EXTERNAL_LINKS.gridironEdgeApp}
                 target="_blank"

@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function SportsLabPage() {
   return (
-    <div className="container px-4 py-16">
+    <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Hero */}
         <div className="space-y-4">

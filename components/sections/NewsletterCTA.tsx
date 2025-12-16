@@ -4,8 +4,8 @@ import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export function NewsletterCTA() {
   return (
-    <section className="container px-4 mt-12">
-      <div className="glass-panel-subtle px-6 py-8">
+    <section className="container px-4 mt-8 sm:mt-12">
+      <div className="glass-panel-subtle px-4 sm:px-6 py-6 sm:py-8">
         <div className="grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:items-center">
           <div className="space-y-3">
             <h2 className="text-xl font-semibold">

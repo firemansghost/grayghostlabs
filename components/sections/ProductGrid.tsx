@@ -6,9 +6,9 @@ import { COMING_SOON, getHighlightItems } from "@/lib/comingSoon";
 
 export function ProductGrid() {
   return (
-    <section className="container px-4 py-16">
+    <section className="container px-4 py-10 sm:py-14 md:py-16">
       <h2 className="text-3xl font-bold mb-8 text-center">Ghost Products</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* GhostGauge Card */}
         <Card>
           <CardHeader>

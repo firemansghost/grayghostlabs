@@ -23,31 +23,33 @@ export function ComingSoonList() {
     <>
       {/* Filter Row */}
       <div className="space-y-3">
-        <div className="flex flex-wrap gap-2 items-center">
-          <span className="text-sm font-medium text-foreground/80">Filter by tag:</span>
-          <button
-            onClick={() => setSelectedTag(null)}
-            className={`text-xs px-3 py-1.5 rounded-md transition-colors ${
-              selectedTag === null
-                ? "bg-primary text-primary-foreground"
-                : "bg-muted text-muted-foreground hover:bg-muted/80"
-            }`}
-          >
-            All
-          </button>
-          {allTags.map((tag) => (
+        <div className="flex flex-col sm:flex-row gap-2">
+          <span className="text-sm font-medium text-foreground/80 whitespace-nowrap">Filter by tag:</span>
+          <div className="flex overflow-x-auto gap-2 pb-1 -mx-1 px-1 sm:mx-0 sm:px-0 sm:overflow-visible sm:flex-wrap">
             <button
-              key={tag}
-              onClick={() => setSelectedTag(tag)}
-              className={`text-xs px-3 py-1.5 rounded-md transition-colors ${
-                selectedTag === tag
+              onClick={() => setSelectedTag(null)}
+              className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap flex-shrink-0 ${
+                selectedTag === null
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
             >
-              {tag}
+              All
             </button>
-          ))}
+            {allTags.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => setSelectedTag(tag)}
+                className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap flex-shrink-0 ${
+                  selectedTag === tag
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-muted-foreground">
           Showing {filteredItems.length} of {COMING_SOON.length}
@@ -55,7 +57,7 @@ export function ComingSoonList() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {filteredItems.map((item) => (
           <Card key={item.title}>
             <CardHeader>

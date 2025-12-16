@@ -10,6 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "The Sports Lab is where Gridiron Edge and future sports models live: power ratings, edges vs the market, and season-long tracking.",
   path: "/sports-lab",
+  ogImage: "/og/default.png",
 });
 
 export default function SportsLabPage() {

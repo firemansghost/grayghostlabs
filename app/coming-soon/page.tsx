@@ -7,6 +7,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Upcoming tools and experiments across macro, geopolitics, crypto, and the fire service.",
   path: "/coming-soon",
+  ogImage: "/og/coming-soon.png",
 });
 
 export default function ComingSoonPage() {

@@ -10,6 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Model-driven power ratings, projected spreads/totals, and PnL tracking for college football sickos who want to test betting ideas against real numbers.",
   path: "/sports/cfb/gridiron-edge",
+  ogImage: "/og/gridiron-edge.png",
 });
 
 export default function GridironEdgeCFBPage() {

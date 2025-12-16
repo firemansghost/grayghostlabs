@@ -10,6 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Pension-aware 457 allocator that maps a modern sleeve portfolio onto Voya core funds and Schwab ETFs—no options chains required.",
   path: "/ghost-allocator",
+  ogImage: "/og/ghost-allocator.png",
 });
 
 export default function GhostAllocatorPage() {

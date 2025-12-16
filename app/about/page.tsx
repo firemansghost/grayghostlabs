@@ -10,6 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "GrayGhost Labs is a one-person lab built by a stubborn firefighter who mixes fire service experience, macro analysis, and sports models into oddly useful tools.",
   path: "/about",
+  ogImage: "/og/default.png",
 });
 
 export default function AboutPage() {

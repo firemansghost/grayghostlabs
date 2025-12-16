@@ -10,6 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "GhostGauge wraps Bitcoin's macro, flow, and sentiment signals into a single 0–100 BTC G-Score with simple risk bands built for DCA and sanity checks.",
   path: "/ghostgauge",
+  ogImage: "/og/ghostgauge.png",
 });
 
 export default function GhostGaugePage() {

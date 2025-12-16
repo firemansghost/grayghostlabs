@@ -9,6 +9,7 @@ export const metadata = buildMetadata({
   description:
     "GhostGauge for Bitcoin risk, Gridiron Edge for college football analytics, and more Ghost utilities as time and rage allow.",
   path: "/",
+  ogImage: "/og/home.png",
 });
 
 export default function Home() {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { COMING_SOON } from "@/lib/comingSoon";
 
 export function ProductGrid() {
   return (
@@ -137,26 +138,29 @@ export function ProductGrid() {
                 Prototypes for problems too specific for normal software.
               </p>
               <p className="text-sm text-muted-foreground">
-                Basically a junk drawer for ideas that annoyed me so much they turned into software.
+                If it keeps annoying me, it eventually shows up here with a UI.
               </p>
             </div>
           </CardHeader>
-          <CardContent>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              <li className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span>Medical bill dispute helper</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span>More Ghost utilities as time (and rage) allow</span>
-              </li>
-            </ul>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                Coming soon highlights:
+              </p>
+              <ul className="space-y-1 text-sm text-foreground/80">
+                {COMING_SOON.slice(0, 3).map((item) => (
+                  <li key={item.title} className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </CardContent>
           <CardFooter>
-            <p className="text-xs text-muted-foreground w-full text-center italic">
-              Coming soon
-            </p>
+            <Button asChild variant="outline" className="w-full">
+              <Link href="/coming-soon">View roadmap</Link>
+            </Button>
           </CardFooter>
         </Card>
       </div>

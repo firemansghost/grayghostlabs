@@ -79,3 +79,26 @@ export const COMING_SOON: ComingSoonItem[] = [
   },
 ];
 
+// Curated highlights for homepage card (3 items)
+export const COMING_SOON_HIGHLIGHTS = [
+  "Global Narrative Engine",
+  "Rate My Collapse",
+  "GhostGauge: Nations",
+] as const;
+
+// Helper to get highlight items from COMING_SOON
+export function getHighlightItems() {
+  return COMING_SOON.filter((item) =>
+    COMING_SOON_HIGHLIGHTS.includes(item.title as any)
+  );
+}
+
+// Get all unique tags from COMING_SOON
+export function getAllTags(): string[] {
+  const tagSet = new Set<string>();
+  COMING_SOON.forEach((item) => {
+    item.tags.forEach((tag) => tagSet.add(tag));
+  });
+  return Array.from(tagSet).sort();
+}
+

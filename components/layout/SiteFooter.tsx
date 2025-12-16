@@ -15,6 +15,12 @@ export function SiteFooter() {
           </p>
           <div className="flex items-center space-x-6">
             <Link
+              href="/coming-soon"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Roadmap
+            </Link>
+            <Link
               href={EXTERNAL_LINKS.x}
               target="_blank"
               rel="noopener noreferrer"

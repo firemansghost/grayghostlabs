@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
-import { COMING_SOON } from "@/lib/comingSoon";
+import { COMING_SOON, getHighlightItems } from "@/lib/comingSoon";
 
 export function ProductGrid() {
   return (
@@ -145,10 +145,10 @@ export function ProductGrid() {
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Coming soon highlights:
+                Coming soon highlights ({getHighlightItems().length} of {COMING_SOON.length}):
               </p>
               <ul className="space-y-1 text-sm text-foreground/80">
-                {COMING_SOON.slice(0, 3).map((item) => (
+                {getHighlightItems().map((item) => (
                   <li key={item.title} className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span>{item.title}</span>

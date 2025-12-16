@@ -15,7 +15,7 @@ export function NewsletterCTA() {
               A weekly-ish rundown of macro, Bitcoin, markets, and whatever
               blew up in the news this week, plus the occasional sports model rant. Charts,
               receipts, and gallows humor from the same brain that built
-              GhostGauge and Gridiron Edge.
+              GhostGauge, Ghost Allocator, and Gridiron Edge.
             </p>
             <p className="text-xs text-muted-foreground italic">
               The only newsletter where geopolitics and gallows humor collide

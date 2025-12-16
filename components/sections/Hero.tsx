@@ -20,7 +20,7 @@ export function Hero() {
             models, and other experiments that probably took way too many hours.
             No hype—just numbers, edges, and a bit of gallows humor.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
             <Button asChild size="lg">
               <Link
                 href={EXTERNAL_LINKS.ghostGaugeApp}
@@ -28,6 +28,15 @@ export function Hero() {
                 rel="noopener noreferrer"
               >
                 Open GhostGauge
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link
+                href={EXTERNAL_LINKS.ghostAllocatorApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Ghost Allocator
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
@@ -50,6 +59,10 @@ export function Hero() {
                 <div className="flex items-center gap-2">
                   <span className="text-primary">▸</span>
                   <span>BTC risk score</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-primary">▸</span>
+                  <span>457 portfolio allocator</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-primary">▸</span>

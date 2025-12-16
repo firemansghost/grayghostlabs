@@ -134,7 +134,7 @@ export function ProductGrid() {
             <CardTitle>Other Experiments</CardTitle>
             <div className="space-y-2">
               <p className="text-sm text-muted-foreground">
-                Ghost projects for problems too oddly specific for normal software.
+                Prototypes for problems too specific for normal software.
               </p>
               <p className="text-sm text-muted-foreground">
                 Basically a junk drawer for ideas that annoyed me so much they turned into software.

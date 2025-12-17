@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { buildMetadata } from "@/lib/seo";
+import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,9 +35,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // JSON-LD structured data
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "GrayGhost Labs",
+      url: SITE_URL,
+      logo: `${SITE_URL}/icons/icon-512.png`,
+      sameAs: [EXTERNAL_LINKS.x, EXTERNAL_LINKS.substack],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "GrayGhost Labs",
+      url: SITE_URL,
+    },
+  ];
+
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.22),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(15,23,42,0.95),_transparent_70%)]">
           <SiteHeader />
           <main className="min-h-screen">{children}</main>

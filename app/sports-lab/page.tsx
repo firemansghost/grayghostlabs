@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { EXTERNAL_LINKS } from "@/lib/constants";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -14,9 +15,38 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function SportsLabPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Sports Lab",
+    description:
+      "A small lab for model comparisons, experiments, and college football analytics work-in-progress.",
+    url: `${SITE_URL}/sports-lab`,
+    mainEntityOfPage: `${SITE_URL}/sports-lab`,
+    publisher: {
+      "@type": "Organization",
+      name: "GrayGhost Labs",
+      url: SITE_URL,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      name: "Sports Lab resources",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Gridiron Edge",
+          item: `${SITE_URL}/sports/cfb/gridiron-edge`,
+        },
+      ],
+    },
+  };
+
   return (
-    <div className="container px-4 py-10 sm:py-14 md:py-16">
-      <div className="max-w-4xl mx-auto space-y-12">
+    <>
+      <JsonLd id="jsonld-sports-lab" data={jsonLd} />
+      <div className="container px-4 py-10 sm:py-14 md:py-16">
+        <div className="max-w-4xl mx-auto space-y-12">
         {/* Hero */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
@@ -126,6 +156,7 @@ export default function SportsLabPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 

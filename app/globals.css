@@ -73,9 +73,31 @@
       background-color 180ms ease-out;
   }
 
-  .glass-panel:hover,
+  /* Reduce blur on mobile for better GPU performance */
+  @media (max-width: 640px) {
+    .glass-panel {
+      backdrop-filter: blur(10px);
+    }
+    .glass-panel-subtle {
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  /* Hover effects only on hover-capable devices (prevents sticky hover on touch) */
+  @media (hover: hover) and (pointer: fine) {
+    .glass-panel:hover,
+    .glass-panel-subtle:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.85),
+        0 0 0 1px rgba(37, 99, 235, 0.35);
+      border-color: rgba(148, 163, 184, 0.45);
+      background-color: rgba(10, 18, 36, 0.96);
+    }
+  }
+
+  /* Focus-within works for keyboard users on all devices */
   .glass-panel:focus-within,
-  .glass-panel-subtle:hover,
   .glass-panel-subtle:focus-within {
     transform: translateY(-2px);
     box-shadow:
@@ -83,6 +105,20 @@
       0 0 0 1px rgba(37, 99, 235, 0.35);
     border-color: rgba(148, 163, 184, 0.45);
     background-color: rgba(10, 18, 36, 0.96);
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .glass-panel,
+    .glass-panel-subtle {
+      transition: none !important;
+    }
+    .glass-panel:hover,
+    .glass-panel:focus-within,
+    .glass-panel-subtle:hover,
+    .glass-panel-subtle:focus-within {
+      transform: none !important;
+    }
   }
 }
 

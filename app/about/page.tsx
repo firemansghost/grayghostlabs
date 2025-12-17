@@ -24,9 +24,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold">Origin Story</h2>
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
-              GrayGhost Labs started as a firefighter + ex-IT guy + macro/crypto/sports
-              nerd who got tired of tools that didn&apos;t exist or tools that
-              existed but were full of hype.
+              GrayGhost Labs started as my digital junkyard: ex-IT professional, macro/crypto/sports data addict, and yes… firefighter. The tools are the coping mechanism.
             </p>
             <p>
               Everything here was built first for personal use and friends, then
@@ -41,7 +39,7 @@ export default function AboutPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">Who is GrayGhost?</h2>
           <p className="text-sm text-muted-foreground">
-            GrayGhost is the pen name for a stubborn Oklahoma City firefighter who
+            GrayGhost is the pen name for a stubborn 30+ year firefighter who
             spends off days buried in macro charts, Bitcoin data, and college
             football box scores. By day it&apos;s fire trucks and medical calls; by
             night it&apos;s spreadsheets, models, and asking why the market or the

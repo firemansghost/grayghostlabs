@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
@@ -44,7 +45,7 @@ export function ProductGrid() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/ghostgauge" prefetch={false}>Learn more about GhostGauge</Link>
+              <AppLink href="/ghostgauge">Learn more about GhostGauge</AppLink>
             </Button>
           </CardFooter>
         </Card>
@@ -84,7 +85,7 @@ export function ProductGrid() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/ghost-allocator" prefetch={false}>Learn more about Ghost Allocator</Link>
+              <AppLink href="/ghost-allocator">Learn more about Ghost Allocator</AppLink>
             </Button>
           </CardFooter>
         </Card>
@@ -124,7 +125,7 @@ export function ProductGrid() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/sports-lab" prefetch={false}>Sports Lab overview</Link>
+              <AppLink href="/sports-lab">Sports Lab overview</AppLink>
             </Button>
           </CardFooter>
         </Card>
@@ -159,7 +160,7 @@ export function ProductGrid() {
           </CardContent>
           <CardFooter>
             <Button asChild variant="outline" className="w-full">
-              <Link href="/coming-soon" prefetch={false}>View roadmap</Link>
+              <AppLink href="/coming-soon">View roadmap</AppLink>
             </Button>
           </CardFooter>
         </Card>

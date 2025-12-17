@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { AppLink } from "@/components/ui/app-link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -27,17 +28,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
-        <Link href="/" prefetch={false} className="flex items-center space-x-2">
+        <AppLink href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold">{siteConfig.name}</span>
-        </Link>
+        </AppLink>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {mainNav.map((item) => (
-            <Link
+            <AppLink
               key={item.href}
               href={item.href}
-              prefetch={false}
               className={cn(
                 "text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",
                 isActive(item.href) &&
@@ -45,7 +45,7 @@ export function SiteHeader() {
               )}
             >
               {item.label}
-            </Link>
+            </AppLink>
           ))}
           <div className="h-4 w-px bg-border mx-2" />
           {externalNav.map((item) => (
@@ -88,10 +88,9 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-border bg-card">
           <div className="container px-4 py-4 space-y-2">
             {mainNav.map((item) => (
-              <Link
+              <AppLink
                 key={item.href}
                 href={item.href}
-                prefetch={false}
                 onClick={closeMobileMenu}
                 className={cn(
                   "block py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",
@@ -99,7 +98,7 @@ export function SiteHeader() {
                 )}
               >
                 {item.label}
-              </Link>
+              </AppLink>
             ))}
             <div className="h-px bg-border my-2" />
             {externalNav.map((item) => (

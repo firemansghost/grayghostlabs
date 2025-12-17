@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppLink } from "@/components/ui/app-link";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
 
@@ -14,20 +15,18 @@ export function SiteFooter() {
             too many models.
           </p>
           <div className="flex items-center space-x-6">
-            <Link
+            <AppLink
               href="/coming-soon"
-              prefetch={false}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Roadmap
-            </Link>
-            <Link
+            </AppLink>
+            <AppLink
               href="/press-kit"
-              prefetch={false}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Press Kit
-            </Link>
+            </AppLink>
             <Link
               href={EXTERNAL_LINKS.x}
               target="_blank"

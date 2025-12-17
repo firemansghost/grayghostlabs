@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate:og": "node scripts/generate-og.mjs",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -24,6 +24,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
+    "cross-env": "^10.1.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
     "postcss": "^8.4.40",

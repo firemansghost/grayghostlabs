@@ -34,19 +34,24 @@ export function ProductGrid() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row gap-2">
-            <Button asChild className="w-full sm:w-auto">
-              <Link
-                href={EXTERNAL_LINKS.ghostGaugeApp}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Launch app
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="w-full sm:w-auto">
-              <AppLink href="/ghostgauge">Learn more about GhostGauge</AppLink>
-            </Button>
+          <CardFooter>
+            <div className="flex w-full flex-col sm:flex-row gap-2">
+              <Button asChild className="flex-1 min-w-0 w-full sm:w-auto">
+                <Link
+                  href={EXTERNAL_LINKS.ghostGaugeApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="whitespace-nowrap">Launch app</span>
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="flex-1 min-w-0 w-full sm:w-auto">
+                <AppLink href="/ghostgauge">
+                  <span className="whitespace-nowrap">Learn more</span>
+                  <span className="sr-only"> about GhostGauge</span>
+                </AppLink>
+              </Button>
+            </div>
           </CardFooter>
         </Card>
 
@@ -74,19 +79,24 @@ export function ProductGrid() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row gap-2">
-            <Button asChild className="w-full sm:w-auto">
-              <Link
-                href={EXTERNAL_LINKS.ghostAllocatorApp}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Launch app
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="w-full sm:w-auto">
-              <AppLink href="/ghost-allocator">Learn more about Ghost Allocator</AppLink>
-            </Button>
+          <CardFooter>
+            <div className="flex w-full flex-col sm:flex-row gap-2">
+              <Button asChild className="flex-1 min-w-0 w-full sm:w-auto">
+                <Link
+                  href={EXTERNAL_LINKS.ghostAllocatorApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="whitespace-nowrap">Launch app</span>
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="flex-1 min-w-0 w-full sm:w-auto">
+                <AppLink href="/ghost-allocator">
+                  <span className="whitespace-nowrap">Learn more</span>
+                  <span className="sr-only"> about Ghost Allocator</span>
+                </AppLink>
+              </Button>
+            </div>
           </CardFooter>
         </Card>
 
@@ -114,19 +124,23 @@ export function ProductGrid() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row gap-2">
-            <Button asChild className="w-full sm:w-auto">
-              <Link
-                href={EXTERNAL_LINKS.gridironEdgeApp}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Current week slate
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="w-full sm:w-auto">
-              <AppLink href="/sports-lab">Sports Lab overview</AppLink>
-            </Button>
+          <CardFooter>
+            <div className="flex w-full flex-col sm:flex-row gap-2">
+              <Button asChild className="flex-1 min-w-0 w-full sm:w-auto">
+                <Link
+                  href={EXTERNAL_LINKS.gridironEdgeApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="whitespace-nowrap">Current week slate</span>
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="flex-1 min-w-0 w-full sm:w-auto">
+                <AppLink href="/sports-lab">
+                  <span className="whitespace-nowrap">Sports Lab overview</span>
+                </AppLink>
+              </Button>
+            </div>
           </CardFooter>
         </Card>
 

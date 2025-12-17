@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
@@ -16,7 +17,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function AboutPage() {
   return (
-    <div className="container px-4 py-10 sm:py-14 md:py-16">
+    <>
+      <BreadcrumbJsonLd
+        id="jsonld-breadcrumb-about"
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ]}
+      />
+      <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-3xl mx-auto space-y-12">
         <h1 className="text-4xl md:text-5xl font-bold">About GrayGhost Labs</h1>
 
@@ -172,6 +181,7 @@ export default function AboutPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 

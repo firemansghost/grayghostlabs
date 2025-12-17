@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { EXTERNAL_LINKS, SITE_URL } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
@@ -13,7 +14,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function PressKitPage() {
   return (
-    <div className="container px-4 py-10 sm:py-14 md:py-16">
+    <>
+      <BreadcrumbJsonLd
+        id="jsonld-breadcrumb-press-kit"
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Press Kit", path: "/press-kit" },
+        ]}
+      />
+      <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="space-y-3">
           <h1 className="text-4xl md:text-5xl font-bold">Press Kit</h1>
@@ -261,6 +270,7 @@ export default function PressKitPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }
 

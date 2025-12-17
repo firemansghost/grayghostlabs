@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { getHighlightItems } from "@/lib/comingSoon";
 import { buildMetadata } from "@/lib/seo";
@@ -38,7 +39,15 @@ export default function StatusPage() {
   const commitShort = formatCommitSha(COMMIT_SHA);
 
   return (
-    <div className="container px-4 py-10 sm:py-14 md:py-16">
+    <>
+      <BreadcrumbJsonLd
+        id="jsonld-breadcrumb-status"
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Status", path: "/status" },
+        ]}
+      />
+      <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="space-y-3">
           <h1 className="text-4xl md:text-5xl font-bold">Status</h1>
@@ -189,6 +198,7 @@ export default function StatusPage() {
         </Card>
       </div>
     </div>
+    </>
   );
 }
 

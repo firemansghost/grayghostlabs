@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
@@ -45,6 +46,13 @@ export default function SportsLabPage() {
   return (
     <>
       <JsonLd id="jsonld-sports-lab" data={jsonLd} />
+      <BreadcrumbJsonLd
+        id="jsonld-breadcrumb-sports-lab"
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Sports Lab", path: "/sports-lab" },
+        ]}
+      />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
         <div className="max-w-4xl mx-auto space-y-12">
         {/* Hero */}

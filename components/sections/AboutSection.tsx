@@ -5,10 +5,7 @@ export function AboutSection() {
         <h2 className="text-3xl font-bold">What is GrayGhost Labs?</h2>
         <div className="space-y-4 text-foreground/80 leading-relaxed">
           <p>
-            GrayGhost Labs is a one-person &quot;lab&quot; that combines fire
-            service experience, macro analysis, crypto markets, and sports
-            analytics into a collection of tools that actually try to solve real
-            problems.
+            GrayGhost Labs is my digital junkyard: ex-IT professional, macro/crypto/sports data addict, and yes… firefighter. The tools are the coping mechanism.
           </p>
           <p>
             There&apos;s no paid shilling here. No &quot;10x your net worth&quot;

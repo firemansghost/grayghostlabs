@@ -27,7 +27,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" prefetch={false} className="flex items-center space-x-2">
           <span className="text-xl font-bold">{siteConfig.name}</span>
         </Link>
 
@@ -37,6 +37,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
+              prefetch={false}
               className={cn(
                 "text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",
                 isActive(item.href) &&
@@ -66,11 +67,18 @@ export function SiteHeader() {
           size="icon"
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
+            <>
+              <X className="h-6 w-6" />
+              <span className="sr-only">Close menu</span>
+            </>
           ) : (
-            <Menu className="h-6 w-6" />
+            <>
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Open menu</span>
+            </>
           )}
         </Button>
       </div>
@@ -83,6 +91,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 onClick={closeMobileMenu}
                 className={cn(
                   "block py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",

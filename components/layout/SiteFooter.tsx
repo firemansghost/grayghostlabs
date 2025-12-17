@@ -16,12 +16,14 @@ export function SiteFooter() {
           <div className="flex items-center space-x-6">
             <Link
               href="/coming-soon"
+              prefetch={false}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Roadmap
             </Link>
             <Link
               href="/press-kit"
+              prefetch={false}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Press Kit
@@ -46,7 +48,7 @@ export function SiteFooter() {
               href={siteConfig.links.email}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Email
+              Email GrayGhost
             </Link>
           </div>
         </div>

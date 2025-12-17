@@ -6,7 +6,7 @@ import { COMING_SOON, getHighlightItems } from "@/lib/comingSoon";
 
 export function ProductGrid() {
   return (
-    <section className="container px-4 py-10 sm:py-14 md:py-16">
+    <section className="container px-4 py-10 sm:py-14 md:py-16" style={{ contentVisibility: "auto" }}>
       <h2 className="text-3xl font-bold mb-8 text-center">Ghost Products</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* GhostGauge Card */}
@@ -44,7 +44,7 @@ export function ProductGrid() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/ghostgauge">Learn more</Link>
+              <Link href="/ghostgauge" prefetch={false}>Learn more about GhostGauge</Link>
             </Button>
           </CardFooter>
         </Card>
@@ -84,7 +84,7 @@ export function ProductGrid() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/ghost-allocator">Learn more</Link>
+              <Link href="/ghost-allocator" prefetch={false}>Learn more about Ghost Allocator</Link>
             </Button>
           </CardFooter>
         </Card>
@@ -124,7 +124,7 @@ export function ProductGrid() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/sports-lab">Sports Lab overview</Link>
+              <Link href="/sports-lab" prefetch={false}>Sports Lab overview</Link>
             </Button>
           </CardFooter>
         </Card>
@@ -159,7 +159,7 @@ export function ProductGrid() {
           </CardContent>
           <CardFooter>
             <Button asChild variant="outline" className="w-full">
-              <Link href="/coming-soon">View roadmap</Link>
+              <Link href="/coming-soon" prefetch={false}>View roadmap</Link>
             </Button>
           </CardFooter>
         </Card>

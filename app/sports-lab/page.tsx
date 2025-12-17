@@ -69,7 +69,7 @@ export default function SportsLabPage() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="w-full sm:w-auto">
-              <Link href="/sports/cfb/gridiron-edge">Learn more</Link>
+              <Link href="/sports/cfb/gridiron-edge">Learn more about Gridiron Edge</Link>
             </Button>
           </CardFooter>
         </Card>

@@ -1,6 +1,6 @@
 export function AboutSection() {
   return (
-    <section className="container px-4 py-10 sm:py-14 md:py-16">
+    <section className="container px-4 py-10 sm:py-14 md:py-16" style={{ contentVisibility: "auto" }}>
       <div className="max-w-3xl mx-auto space-y-6">
         <h2 className="text-3xl font-bold">What is GrayGhost Labs?</h2>
         <div className="space-y-4 text-foreground/80 leading-relaxed">

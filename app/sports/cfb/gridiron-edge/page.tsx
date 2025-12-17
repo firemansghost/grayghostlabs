@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { EXTERNAL_LINKS } from "@/lib/constants";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -14,9 +15,33 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function GridironEdgeCFBPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Gridiron Edge",
+    description:
+      "Model-driven power ratings, projected spreads/totals, and PnL tracking for college football analytics and model comparisons.",
+    applicationCategory: "SportsApplication",
+    operatingSystem: "Any",
+    url: EXTERNAL_LINKS.gridironEdgeApp,
+    mainEntityOfPage: `${SITE_URL}/sports/cfb/gridiron-edge`,
+    publisher: {
+      "@type": "Organization",
+      name: "GrayGhost Labs",
+      url: SITE_URL,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
-    <div className="container px-4 py-10 sm:py-14 md:py-16">
-      <div className="max-w-4xl mx-auto space-y-12">
+    <>
+      <JsonLd id="jsonld-gridiron-edge" data={jsonLd} />
+      <div className="container px-4 py-10 sm:py-14 md:py-16">
+        <div className="max-w-4xl mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
@@ -203,6 +228,7 @@ export default function GridironEdgeCFBPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 

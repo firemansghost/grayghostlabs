@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { EXTERNAL_LINKS } from "@/lib/constants";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -14,9 +15,33 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function GhostGaugePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "GhostGauge",
+    description:
+      "A Bitcoin risk dashboard that turns market data into a clearer risk signal (G-Score + bands).",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Any",
+    url: EXTERNAL_LINKS.ghostGaugeApp,
+    mainEntityOfPage: `${SITE_URL}/ghostgauge`,
+    publisher: {
+      "@type": "Organization",
+      name: "GrayGhost Labs",
+      url: SITE_URL,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
-    <div className="container px-4 py-10 sm:py-14 md:py-16">
-      <div className="max-w-4xl mx-auto space-y-12">
+    <>
+      <JsonLd id="jsonld-ghostgauge" data={jsonLd} />
+      <div className="container px-4 py-10 sm:py-14 md:py-16">
+        <div className="max-w-4xl mx-auto space-y-12">
         {/* Header Block */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
@@ -176,6 +201,7 @@ export default function GhostGaugePage() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 

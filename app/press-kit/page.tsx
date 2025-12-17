@@ -254,6 +254,11 @@ export default function PressKitPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Contact Note */}
+        <p className="text-sm text-muted-foreground text-center">
+          Fastest contact: X DMs. If it&apos;s worth building, start there.
+        </p>
       </div>
     </div>
   );

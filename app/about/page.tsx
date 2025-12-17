@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
@@ -159,6 +160,15 @@ export default function AboutPage() {
             </Link>
             {" "}— DMs are the fastest way. If you&apos;ve got a problem worth building for, start there.
           </p>
+          <Button asChild className="w-full sm:w-auto">
+            <Link
+              href={EXTERNAL_LINKS.x}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DM @GrayGhost on X
+            </Link>
+          </Button>
         </section>
       </div>
     </div>

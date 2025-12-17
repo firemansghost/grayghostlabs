@@ -120,6 +120,17 @@
       transform: none !important;
     }
   }
+
+  /* Native <details>/<summary> styling for mobile menu */
+  summary {
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::marker {
+    display: none;
+  }
 }
 
 

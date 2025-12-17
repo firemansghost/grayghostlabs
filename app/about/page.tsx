@@ -156,15 +156,8 @@ export default function AboutPage() {
               className="text-primary hover:underline"
             >
               X
-            </Link>{" "}
-            or reach out via{" "}
-            <Link
-              href={siteConfig.links.email}
-              className="text-primary hover:underline"
-            >
-              email
             </Link>
-            .
+            {" "}— DMs are the fastest way. If you&apos;ve got a problem worth building for, start there.
           </p>
         </section>
       </div>

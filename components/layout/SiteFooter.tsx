@@ -21,6 +21,12 @@ export function SiteFooter() {
               Roadmap
             </Link>
             <Link
+              href="/press-kit"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Press Kit
+            </Link>
+            <Link
               href={EXTERNAL_LINKS.x}
               target="_blank"
               rel="noopener noreferrer"

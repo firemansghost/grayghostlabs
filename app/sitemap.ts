@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/sports/cfb/gridiron-edge",
     "/coming-soon",
     "/about",
+    "/press-kit",
   ];
 
   return routes.map((path) => ({

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/coming-soon",
     "/about",
     "/press-kit",
+    "/status",
   ];
 
   return routes.map((path) => ({

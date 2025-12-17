@@ -27,6 +27,12 @@ export function SiteFooter() {
             >
               Press Kit
             </AppLink>
+            <AppLink
+              href="/status"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Status
+            </AppLink>
             <Link
               href={EXTERNAL_LINKS.x}
               target="_blank"

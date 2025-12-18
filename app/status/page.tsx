@@ -4,6 +4,7 @@ import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { getHighlightItems } from "@/lib/comingSoon";
 import { buildMetadata } from "@/lib/seo";
@@ -46,6 +47,13 @@ export default function StatusPage() {
           { name: "Home", path: "/" },
           { name: "Status", path: "/status" },
         ]}
+      />
+      <PageJsonLd
+        type="WebPage"
+        name="Status"
+        path="/status"
+        description="What's live, what's next, and what build is running."
+        id="jsonld-status-page"
       />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-4xl mx-auto space-y-8">

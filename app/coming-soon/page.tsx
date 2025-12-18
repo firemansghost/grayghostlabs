@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { SITE_URL } from "@/lib/constants";
 import { COMING_SOON } from "@/lib/comingSoon";
 import { buildMetadata } from "@/lib/seo";
@@ -44,6 +45,13 @@ export default function ComingSoonPage() {
         ]}
       />
       <JsonLd id="jsonld-coming-soon-itemlist" data={itemListJsonLd} />
+      <PageJsonLd
+        type="WebPage"
+        name="Coming Soon"
+        path="/coming-soon"
+        description="A list of future tools. Born in chaos. Assembled with caffeine."
+        id="jsonld-coming-soon-page"
+      />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}

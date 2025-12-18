@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
@@ -24,6 +25,13 @@ export default function AboutPage() {
           { name: "Home", path: "/" },
           { name: "About", path: "/about" },
         ]}
+      />
+      <PageJsonLd
+        type="AboutPage"
+        name="About GrayGhost Labs"
+        path="/about"
+        description="Who GrayGhost is, why the tools exist, and how they're built."
+        id="jsonld-about-page"
       />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-3xl mx-auto space-y-12">

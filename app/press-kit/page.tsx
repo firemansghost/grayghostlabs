@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS, SITE_URL } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
@@ -21,6 +22,13 @@ export default function PressKitPage() {
           { name: "Home", path: "/" },
           { name: "Press Kit", path: "/press-kit" },
         ]}
+      />
+      <PageJsonLd
+        type="WebPage"
+        name="Press Kit"
+        path="/press-kit"
+        description="Brand assets, links, and boilerplate for GrayGhost Labs."
+        id="jsonld-press-kit-page"
       />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-4xl mx-auto space-y-8">

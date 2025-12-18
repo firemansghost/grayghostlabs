@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
+import { COMING_SOON } from "@/lib/comingSoon";
 import { buildMetadata } from "@/lib/seo";
 import { ComingSoonList } from "./ComingSoonList";
 
@@ -12,6 +15,25 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function ComingSoonPage() {
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Coming Soon: Weapons-Grade Curiosity",
+    description: "A list of future tools. Born in chaos. Assembled with caffeine.",
+    url: `${SITE_URL}/coming-soon`,
+    mainEntityOfPage: `${SITE_URL}/coming-soon`,
+    itemListElement: COMING_SOON.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Thing",
+        name: p.title,
+        description: p.description,
+        keywords: (p.tags || []).join(", "),
+      },
+    })),
+  };
+
   return (
     <>
       <BreadcrumbJsonLd
@@ -21,6 +43,7 @@ export default function ComingSoonPage() {
           { name: "Coming Soon", path: "/coming-soon" },
         ]}
       />
+      <JsonLd id="jsonld-coming-soon-itemlist" data={itemListJsonLd} />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}

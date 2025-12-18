@@ -23,6 +23,12 @@ export const metadata = buildMetadata({
 });
 
 export default function Home() {
+  const publisher = {
+    "@type": "Organization",
+    name: "GrayGhost Labs",
+    url: SITE_URL,
+  };
+
   const homeItemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -31,6 +37,7 @@ export default function Home() {
       "Featured tools from GrayGhost Labs across markets, crypto, and sports analytics.",
     url: SITE_URL,
     mainEntityOfPage: SITE_URL,
+    publisher,
     itemListElement: [
       {
         "@type": "ListItem",
@@ -42,6 +49,7 @@ export default function Home() {
           operatingSystem: "Any",
           url: EXTERNAL_LINKS.ghostGaugeApp,
           mainEntityOfPage: `${SITE_URL}/ghostgauge`,
+          publisher,
         },
       },
       {
@@ -54,6 +62,7 @@ export default function Home() {
           operatingSystem: "Any",
           url: EXTERNAL_LINKS.ghostAllocatorApp,
           mainEntityOfPage: `${SITE_URL}/ghost-allocator`,
+          publisher,
         },
       },
       {
@@ -66,6 +75,7 @@ export default function Home() {
           operatingSystem: "Any",
           url: EXTERNAL_LINKS.gridironEdgeApp,
           mainEntityOfPage: `${SITE_URL}/sports/cfb/gridiron-edge`,
+          publisher,
         },
       },
       {
@@ -76,6 +86,7 @@ export default function Home() {
           name: "Coming Soon",
           url: `${SITE_URL}/coming-soon`,
           mainEntityOfPage: `${SITE_URL}/coming-soon`,
+          publisher,
         },
       },
     ],

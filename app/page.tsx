@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
 import { Hero } from "@/components/sections/Hero";
 import { ProductGrid } from "@/components/sections/ProductGrid";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 // Code-split below-the-fold components to reduce initial JS
@@ -21,8 +23,67 @@ export const metadata = buildMetadata({
 });
 
 export default function Home() {
+  const homeItemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "GrayGhost Labs — Featured Tools",
+    description:
+      "Featured tools from GrayGhost Labs across markets, crypto, and sports analytics.",
+    url: SITE_URL,
+    mainEntityOfPage: SITE_URL,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "WebApplication",
+          name: "GhostGauge",
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          url: EXTERNAL_LINKS.ghostGaugeApp,
+          mainEntityOfPage: `${SITE_URL}/ghostgauge`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "WebApplication",
+          name: "Ghost Allocator",
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          url: EXTERNAL_LINKS.ghostAllocatorApp,
+          mainEntityOfPage: `${SITE_URL}/ghost-allocator`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "WebApplication",
+          name: "Gridiron Edge",
+          applicationCategory: "SportsApplication",
+          operatingSystem: "Any",
+          url: EXTERNAL_LINKS.gridironEdgeApp,
+          mainEntityOfPage: `${SITE_URL}/sports/cfb/gridiron-edge`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "WebPage",
+          name: "Coming Soon",
+          url: `${SITE_URL}/coming-soon`,
+          mainEntityOfPage: `${SITE_URL}/coming-soon`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <JsonLd id="jsonld-home-itemlist" data={homeItemListJsonLd} />
       <Hero />
       <ProductGrid />
       <NewsletterCTA />

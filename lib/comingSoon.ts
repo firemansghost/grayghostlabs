@@ -12,6 +12,12 @@ export const COMING_SOON: ComingSoonItem[] = [
     tags: ["Geopolitics", "Media", "AI"],
   },
   {
+    title: "GrayGhost Plumbing Dashboard",
+    description:
+      "A live macro-stress dashboard that tracks hidden system pressure across shipping lanes, energy, sanctions enforcement, cyber posture, industrial output, and fiscal stress. Six dials roll up into one composite pressure score with clear drivers and \"GrayGhost Notes,\" built to spot regime stress before headlines catch up — and to serve as a weekly anchor link for TWIMM.",
+    tags: ["Macro", "Dashboard", "Risk"],
+  },
+  {
     title: "Narrative Map",
     description:
       "Visualizes how narratives spread across platforms and time. Tracks what gets amplified, what gets buried, and where the gaps are.",

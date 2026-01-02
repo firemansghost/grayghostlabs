@@ -16,6 +16,12 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function ComingSoonPage() {
+  const publisher = {
+    "@type": "Organization",
+    name: "GrayGhost Labs",
+    url: SITE_URL,
+  };
+
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -23,6 +29,7 @@ export default function ComingSoonPage() {
     description: "A list of future tools. Born in chaos. Assembled with caffeine.",
     url: `${SITE_URL}/coming-soon`,
     mainEntityOfPage: `${SITE_URL}/coming-soon`,
+    publisher,
     itemListElement: COMING_SOON.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
@@ -31,6 +38,7 @@ export default function ComingSoonPage() {
         name: p.title,
         description: p.description,
         keywords: (p.tags || []).join(", "),
+        publisher,
       },
     })),
   };

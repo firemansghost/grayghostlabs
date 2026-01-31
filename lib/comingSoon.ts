@@ -18,12 +18,6 @@ export const COMING_SOON: ComingSoonItem[] = [
     tags: ["Macro", "Dashboard", "Risk"],
   },
   {
-    title: "Trend100 Momentum Dashboard",
-    description:
-      "A dark-mode market leadership command center tracking 100 curated, high-liquidity tickers. Each tile is classified Bull, Caution, or Bear using a dual-timeframe trend filter (200-day SMA + 50-week SMA/EMA support band), with a Market Health Score that summarizes regime shifts at a glance. Built for high-signal macro context without the headline noise.",
-    tags: ["Macro", "Momentum", "Dashboard"],
-  },
-  {
     title: "Narrative Map",
     description:
       "Visualizes how narratives spread across platforms and time. Tracks what gets amplified, what gets buried, and where the gaps are.",

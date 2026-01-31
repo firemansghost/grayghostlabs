@@ -82,6 +82,19 @@ export default function Home() {
         "@type": "ListItem",
         position: 4,
         item: {
+          "@type": "WebApplication",
+          name: "Trend100",
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          url: EXTERNAL_LINKS.trend100App,
+          mainEntityOfPage: `${SITE_URL}/trend100`,
+          publisher,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
           "@type": "WebPage",
           name: "Coming Soon",
           url: `${SITE_URL}/coming-soon`,

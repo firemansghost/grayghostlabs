@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/ghostgauge",
     "/ghost-allocator",
+    "/trend100",
     "/sports-lab",
     "/sports/cfb/gridiron-edge",
     "/coming-soon",

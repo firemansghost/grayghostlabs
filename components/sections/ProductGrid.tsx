@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AppLink } from "@/components/ui/app-link";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
@@ -138,6 +139,54 @@ export function ProductGrid() {
               <Button asChild variant="outline" className="flex-1 min-w-0 w-full sm:w-auto">
                 <AppLink href="/sports-lab">
                   <span className="whitespace-nowrap">Sports Lab overview</span>
+                </AppLink>
+              </Button>
+            </div>
+          </CardFooter>
+        </Card>
+
+        {/* Trend100 Card */}
+        <Card>
+          <CardHeader>
+            <div className="flex items-start justify-between gap-3">
+              <CardTitle>Trend100</CardTitle>
+              <Badge className="shrink-0">LIVE</Badge>
+            </div>
+            <CardDescription>
+              A market leadership command center tracking trend breadth and overextension across multiple “decks”—so you can see regime shifts before headlines catch up.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>100 high-liquidity tickers across key groups</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Health + heat to separate trend from froth</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Built for macro context without headline noise</span>
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <div className="flex w-full flex-col sm:flex-row gap-2">
+              <Button asChild className="flex-1 min-w-0 w-full sm:w-auto">
+                <Link
+                  href={EXTERNAL_LINKS.trend100App}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="whitespace-nowrap">Launch Trend100</span>
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="flex-1 min-w-0 w-full sm:w-auto">
+                <AppLink href="/trend100">
+                  <span className="whitespace-nowrap">Learn more</span>
+                  <span className="sr-only"> about Trend100</span>
                 </AppLink>
               </Button>
             </div>

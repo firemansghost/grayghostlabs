@@ -8,26 +8,14 @@ export const COMING_SOON: ComingSoonItem[] = [
   {
     title: "Global Narrative Engine",
     description:
-      "Compares how the same world event is reported across 7–8 countries/languages. Finds alignment, omissions, spin — then produces one blunt summary.",
-    tags: ["Geopolitics", "Media", "AI"],
+      "One event. Many spins. A narrative intelligence dashboard that compares how the same world event is framed across 7–8 countries and languages — then shows what's emphasized, what's omitted, and where the stories align or diverge. Includes a side-by-side \"receipts\" view plus a Narrative Map to visualize how angles spread and drift over time.",
+    tags: ["Geopolitics", "Media", "AI", "Analysis", "Visualization"],
   },
   {
     title: "GrayGhost Plumbing Dashboard",
     description:
       "A live macro-stress dashboard that tracks hidden system pressure across shipping lanes, energy, sanctions enforcement, cyber posture, industrial output, and fiscal stress. Six dials roll up into one composite pressure score with clear drivers and \"GrayGhost Notes,\" built to spot regime stress before headlines catch up — and to serve as a weekly anchor link for TWIMM.",
     tags: ["Macro", "Dashboard", "Risk"],
-  },
-  {
-    title: "Narrative Map",
-    description:
-      "Visualizes how narratives spread across platforms and time. Tracks what gets amplified, what gets buried, and where the gaps are.",
-    tags: ["Geopolitics", "Media", "Visualization"],
-  },
-  {
-    title: "Propaganda Comparator",
-    description:
-      "Side-by-side comparison of how different governments/media frame the same event. No commentary, just the receipts.",
-    tags: ["Geopolitics", "Media", "Analysis"],
   },
   {
     title: "Poverty Line Re-Calibrator",

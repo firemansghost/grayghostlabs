@@ -79,17 +79,18 @@ export const COMING_SOON: ComingSoonItem[] = [
   },
 ];
 
-// Curated highlights for homepage card (3 items)
+// Curated highlights for homepage card (3 items) — order preserved for preview list
 export const COMING_SOON_HIGHLIGHTS = [
+  "GhostFlow: Passive Pressure Gauge",
   "Global Narrative Engine",
-  "Rate My Collapse",
-  "GhostGauge: Nations",
+  "GrayGhost Plumbing Dashboard",
 ] as const;
 
-// Helper to get highlight items from COMING_SOON
+// Helper to get highlight items from COMING_SOON (order matches COMING_SOON_HIGHLIGHTS)
 export function getHighlightItems() {
-  return COMING_SOON.filter((item) =>
-    COMING_SOON_HIGHLIGHTS.includes(item.title as any)
+  const order: readonly string[] = COMING_SOON_HIGHLIGHTS;
+  return COMING_SOON.filter((item) => order.includes(item.title)).sort(
+    (a, b) => order.indexOf(a.title) - order.indexOf(b.title)
   );
 }
 

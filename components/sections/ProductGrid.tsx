@@ -8,7 +8,7 @@ import { COMING_SOON, getHighlightItems } from "@/lib/comingSoon";
 
 export function ProductGrid() {
   return (
-    <section className="container px-4 py-10 sm:py-14 md:py-16" style={{ contentVisibility: "auto" }}>
+    <section id="ghost-products" className="container px-4 py-10 sm:py-14 md:py-16" style={{ contentVisibility: "auto" }}>
       <h2 className="text-3xl font-bold mb-8 text-center">Ghost Products</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* GhostGauge Card */}
@@ -61,9 +61,7 @@ export function ProductGrid() {
           <CardHeader>
             <CardTitle>Ghost Allocator</CardTitle>
             <CardDescription>
-              Portfolio research hub built around a pension-aware 457 framework: the core allocator,
-              GhostRegime risk posture, GhostYield income-sleeve research (v0.1), model
-              portfolios, and GhostFlow—a passive-pressure dashboard still in the shop.
+              Portfolio research hub built around a pension-aware 457 framework.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -71,9 +69,9 @@ export function ProductGrid() {
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
                 <span>
-                  <strong className="text-foreground/90">Core allocator</strong>
+                  <strong className="text-foreground/90">Core Allocator</strong>
                   {" "}
-                  — sleeve-based mapping onto Voya + BrokerageLink; roughly right, not perfectly wrong.
+                  — sleeve mapping onto Voya + BrokerageLink
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -81,7 +79,7 @@ export function ProductGrid() {
                 <span>
                   <strong className="text-foreground/90">GhostRegime</strong>
                   {" "}
-                  — market regime / risk posture readout inside the hub.
+                  — market regime and risk posture
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -89,16 +87,15 @@ export function ProductGrid() {
                 <span>
                   <strong className="text-foreground/90">GhostYield</strong>
                   {" "}
-                  — v0.1 income-sleeve research: yield source, NAV behavior, payout quality, data
-                  freshness, and flags—not a model portfolio or a recommendation engine.
+                  — income-sleeve research, v0.1 manual snapshot
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
                 <span>
-                  <strong className="text-foreground/90">Model portfolios</strong>
+                  <strong className="text-foreground/90">Model Portfolios</strong>
                   {" "}
-                  — static templates you can riff on, not gospel.
+                  — static templates
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -106,23 +103,10 @@ export function ProductGrid() {
                 <span>
                   <strong className="text-foreground/90">GhostFlow</strong>
                   {" "}
-                  — in development; plumbing monitor for passive-flow pressure, not a crash oracle.
+                  — passive-pressure dashboard in development
                 </span>
               </li>
             </ul>
-            <div className="mt-4 flex flex-wrap items-center gap-2 pt-3 border-t border-border/60">
-              <Badge variant="secondary" className="shrink-0">
-                v0.1 / research
-              </Badge>
-              <Link
-                href={EXTERNAL_LINKS.ghostYieldApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-primary hover:underline underline-offset-2"
-              >
-                Open GhostYield
-              </Link>
-            </div>
           </CardContent>
           <CardFooter>
             <div className="flex w-full flex-col sm:flex-row gap-2">

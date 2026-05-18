@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 
@@ -16,9 +17,9 @@ export function Hero() {
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
             GrayGhost Labs is a small collection of obsessively-built tools for
-            markets and sports. Bitcoin risk dashboards, college football
-            models, and other experiments that probably took way too many hours.
-            No hype—just numbers, edges, and a bit of gallows humor.
+            markets and sports—BTC risk, a 457-aware portfolio hub, regime and trend
+            decks, yield-sleeve research, college football models, and side projects
+            that ate too many weekends. No hype—just numbers, edges, and gallows humor.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <Button asChild size="lg" className="w-full sm:w-auto">
@@ -40,13 +41,9 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link
-                href={EXTERNAL_LINKS.gridironEdgeApp}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open Gridiron Edge – CFB
-              </Link>
+              <AppLink href="/#ghost-products">
+                Explore all tools
+              </AppLink>
             </Button>
           </div>
         </div>
@@ -62,7 +59,15 @@ export function Hero() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-primary">▸</span>
-                  <span>457 portfolio allocator</span>
+                  <span>457-aware portfolio hub</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-primary">▸</span>
+                  <span>Market regime + trend dashboards</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-primary">▸</span>
+                  <span>Yield-sleeve research</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-primary">▸</span>
@@ -70,7 +75,10 @@ export function Hero() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-primary">▸</span>
-                  <span>More experiments loading…</span>
+                  <span>
+                    Passive-flow monitor loading
+                    <span className="text-muted-foreground animate-pulse">_</span>
+                  </span>
                 </div>
               </div>
             </div>

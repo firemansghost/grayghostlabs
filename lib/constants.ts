@@ -5,6 +5,7 @@ export const EXTERNAL_LINKS = {
   gridironEdgeApp: "https://gridiron-edge-v1.vercel.app",
   trend100App: "https://trend100.vercel.app",
   ghostAllocatorApp: "https://ghost-allocator.vercel.app/",
+  ghostYieldApp: "https://ghost-allocator.vercel.app/income-factory",
   ghostAllocatorWhy6040: "https://ghost-allocator.vercel.app/why-60-40-dead",
   ghostAllocatorRepo: "https://github.com/firemansghost/ghost-allocator",
   substack: "https://grayghost.substack.com",

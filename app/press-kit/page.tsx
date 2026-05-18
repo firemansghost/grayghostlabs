@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AppLink } from "@/components/ui/app-link";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS, SITE_URL } from "@/lib/constants";
@@ -131,6 +132,33 @@ export default function PressKitPage() {
                       className="text-muted-foreground hover:text-foreground underline underline-offset-2"
                     >
                       Gridiron Edge
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={EXTERNAL_LINKS.trend100App}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                    >
+                      Trend100 (app)
+                    </Link>
+                    {" · "}
+                    <AppLink
+                      href="/trend100"
+                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                    >
+                      Site overview
+                    </AppLink>
+                  </li>
+                  <li>
+                    <Link
+                      href={EXTERNAL_LINKS.ghostYieldApp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                    >
+                      GhostYield (Ghost Allocator — income-sleeve research)
                     </Link>
                   </li>
                 </ul>

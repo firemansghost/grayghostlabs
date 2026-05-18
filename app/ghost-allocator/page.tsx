@@ -8,9 +8,9 @@ import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Ghost Allocator – Post-60/40 Portfolio Builder",
+  title: "Ghost Allocator – Portfolio Research Hub (457-Aware)",
   description:
-    "Pension-aware 457 allocator that maps a modern sleeve portfolio onto Voya core funds and Schwab ETFs—no options chains required.",
+    "Pension-aware 457 hub: core allocator, GhostRegime, GhostYield income-sleeve research, model portfolios, and GhostFlow (passive-pressure monitor, in development).",
   path: "/ghost-allocator",
   ogImage: "/og/ghost-allocator.png",
 });
@@ -21,7 +21,7 @@ export default function GhostAllocatorPage() {
     "@type": "WebApplication",
     name: "Ghost Allocator",
     description:
-      "Pension-aware 457 allocator that maps a modern sleeve portfolio onto Voya core funds and Schwab ETFs—no options chains required.",
+      "Portfolio research hub for building around a pension-aware 457 framework: core allocator, GhostRegime risk posture, GhostYield income-sleeve research, model portfolios, and GhostFlow passive-pressure dashboard (in development).",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     url: EXTERNAL_LINKS.ghostAllocatorApp,
@@ -53,58 +53,95 @@ export default function GhostAllocatorPage() {
         {/* Header Block */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Ghost Allocator – Post-60/40 Portfolio Builder
+            Ghost Allocator – Portfolio Research Hub
           </h1>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            Ghost Allocator is a pension-aware, 457-aware portfolio builder for a
-            post-60/40 world. It maps a modern sleeve-based allocation onto your
-            real 457 plan options—Voya core funds and Schwab ETFs via
-            BrokerageLink. The goal is roughly right, not perfectly wrong: a
-            portfolio that accounts for your pension floor and doesn&apos;t
-            require options chains or complex derivatives.
+            Ghost Allocator is a portfolio research hub for building around a
+            pension-aware 457 framework. Inside one roof you get the core
+            allocator, GhostRegime for risk posture, GhostYield for income-sleeve
+            research (v0.1), static model portfolios, and—in development—GhostFlow,
+            a passive-pressure dashboard for market structure. Still roughly right,
+            not perfectly wrong—and still allergic to options chains.
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            <strong className="text-foreground/90">GhostYield</strong> compares
+            yield-producing sleeves by income source, NAV behavior, payout quality,
+            data freshness, and risk flags before you bolt them around an existing
+            portfolio. Research only—not a model portfolio, not a recommendation
+            engine, not a substitute for reading the boring stuff yourself.
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            <strong className="text-foreground/90">GhostFlow</strong> (
+            <em>not live yet</em>
+            ) tracks passive-flow pressure, ETF issuance, index concentration,
+            volatility mechanics, systematic-flow proxies, and structural
+            fragility.{" "}
+            <strong className="text-foreground/90">
+              Not a crash predictor.
+            </strong>{" "}
+            A plumbing monitor for a market where price discovery increasingly
+            shares the wheel with autopilot.
           </p>
         </div>
 
         {/* Feature List */}
         <section className="space-y-4">
-          <h2 className="text-2xl font-bold">Features</h2>
+          <h2 className="text-2xl font-bold">What&apos;s in the hub</h2>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <span className="text-primary mt-1 text-xl">•</span>
               <div>
                 <strong className="text-foreground">
-                  Pension / income-floor aware intake
+                  Core allocator (457-aware)
                 </strong>
                 <span className="text-foreground/80">
                   {" "}
-                  – Accounts for your pension as a floor, so the allocation
-                  doesn&apos;t over-allocate to bonds you don&apos;t need.
+                  — Pension / income-floor aware intake; sleeve-based allocation
+                  mapped to Voya core funds + Schwab ETFs via BrokerageLink.
                 </span>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-primary mt-1 text-xl">•</span>
               <div>
-                <strong className="text-foreground">
-                  Sleeve-based allocation (post-60/40)
-                </strong>
+                <strong className="text-foreground">GhostRegime</strong>
                 <span className="text-foreground/80">
                   {" "}
-                  – Modern portfolio structure that moves beyond the traditional
-                  60/40 split, organized into risk sleeves.
+                  — Market regime and risk posture readout so the rest of the hub
+                  isn&apos;t flying blind.
                 </span>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-primary mt-1 text-xl">•</span>
               <div>
-                <strong className="text-foreground">
-                  Plan mapping for Voya core funds + Schwab ETFs/BrokerageLink
-                </strong>
+                <strong className="text-foreground">GhostYield</strong>
                 <span className="text-foreground/80">
                   {" "}
-                  – Translates the sleeve model into actual funds available in
-                  your 457 plan, including BrokerageLink options.
+                  — Live v0.1 manual yield-sleeve research dashboard; use it to
+                  compare sleeves, not to outsource thinking.
+                </span>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary mt-1 text-xl">•</span>
+              <div>
+                <strong className="text-foreground">Model portfolios</strong>
+                <span className="text-foreground/80">
+                  {" "}
+                  — Static templates: starting points, not mandates.
+                </span>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary mt-1 text-xl">•</span>
+              <div>
+                <strong className="text-foreground">GhostFlow (in development)</strong>
+                <span className="text-foreground/80">
+                  {" "}
+                  — Passive pressure / market-structure fragility dashboard. Not
+                  predictive—just checks whether the plumbing is making weird
+                  noises.
                 </span>
               </div>
             </li>
@@ -116,8 +153,8 @@ export default function GhostAllocatorPage() {
                 </strong>
                 <span className="text-foreground/80">
                   {" "}
-                  – Built for people who want a modern allocation without
-                  derivatives complexity or financial advisor speak.
+                  — Built for people who want modern allocation without derivatives
+                  rabbit holes or advisor word salad.
                 </span>
               </div>
             </li>
@@ -136,6 +173,15 @@ export default function GhostAllocatorPage() {
                     rel="noopener noreferrer"
                   >
                     Open Ghost Allocator
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link
+                    href={EXTERNAL_LINKS.ghostYieldApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open GhostYield
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">

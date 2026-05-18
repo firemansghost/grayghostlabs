@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
-import { getHighlightItems } from "@/lib/comingSoon";
+import { COMING_SOON, getHighlightItems } from "@/lib/comingSoon";
 import { buildMetadata } from "@/lib/seo";
 import { BUILD_TIME, COMMIT_SHA, BRANCH, VERCEL_ENV } from "@/lib/buildInfo.generated";
 
@@ -36,6 +36,9 @@ function formatCommitSha(sha: string | null): string {
 
 export default function StatusPage() {
   const highlights = getHighlightItems().slice(0, 3);
+  const ghostFlowItem = COMING_SOON.find(
+    (i) => i.title === "GhostFlow: Passive Pressure Gauge"
+  );
   const buildTimeFormatted = formatBuildTime(BUILD_TIME);
   const commitShort = formatCommitSha(COMMIT_SHA);
 
@@ -94,16 +97,27 @@ export default function StatusPage() {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <h3 className="font-semibold">Ghost Allocator</h3>
-                  <p className="text-sm text-muted-foreground">Pension-aware portfolio builder</p>
+                  <p className="text-sm text-muted-foreground">
+                    457-aware hub: allocator, GhostRegime, GhostYield research, templates
+                  </p>
                 </div>
-                <div className="flex gap-2">
-                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild size="sm" variant="default" className="flex-1 sm:flex-initial">
                     <Link
                       href={EXTERNAL_LINKS.ghostAllocatorApp}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Open app
+                    </Link>
+                  </Button>
+                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
+                    <Link
+                      href={EXTERNAL_LINKS.ghostYieldApp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GhostYield
                     </Link>
                   </Button>
                   <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
@@ -131,9 +145,67 @@ export default function StatusPage() {
                   </Button>
                 </div>
               </div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div>
+                  <h3 className="font-semibold">Trend100</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Market leadership decks: trend breadth and overextension
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
+                    <Link
+                      href={EXTERNAL_LINKS.trend100App}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Open app
+                    </Link>
+                  </Button>
+                  <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
+                    <AppLink href="/trend100">Learn more</AppLink>
+                  </Button>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
+
+        {/* Active build */}
+        {ghostFlowItem && (
+          <Card className="glass-panel">
+            <CardHeader>
+              <CardTitle>Active build</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                Not live — in development inside Ghost Allocator
+              </p>
+              <div className="flex items-start gap-3">
+                <span className="text-primary mt-0.5">▸</span>
+                <div className="flex-1 space-y-2">
+                  <h3 className="font-semibold text-sm">{ghostFlowItem.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {ghostFlowItem.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {ghostFlowItem.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2 py-0.5 rounded bg-muted text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <Button asChild variant="outline" size="sm" className="w-full sm:w-auto">
+                <AppLink href="/coming-soon">Full roadmap</AppLink>
+              </Button>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Next Up */}
         <Card className="glass-panel">

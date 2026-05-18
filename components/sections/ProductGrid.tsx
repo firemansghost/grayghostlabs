@@ -61,24 +61,68 @@ export function ProductGrid() {
           <CardHeader>
             <CardTitle>Ghost Allocator</CardTitle>
             <CardDescription>
-              Pension-aware portfolio builder for a post-60/40 world. Maps a modern sleeve model onto your real 457 options (Voya + Schwab).
+              Portfolio research hub built around a pension-aware 457 framework: the core allocator,
+              GhostRegime risk posture, GhostYield income-sleeve research (v0.1), model
+              portfolios, and GhostFlow—a passive-pressure dashboard still in the shop.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm text-foreground/80">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Pension / income-floor aware</span>
+                <span>
+                  <strong className="text-foreground/90">Core allocator</strong>
+                  {" "}
+                  — sleeve-based mapping onto Voya + BrokerageLink; roughly right, not perfectly wrong.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Sleeve-based allocation (post-60/40)</span>
+                <span>
+                  <strong className="text-foreground/90">GhostRegime</strong>
+                  {" "}
+                  — market regime / risk posture readout inside the hub.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Maps to Voya core funds + Schwab ETFs</span>
+                <span>
+                  <strong className="text-foreground/90">GhostYield</strong>
+                  {" "}
+                  — v0.1 income-sleeve research: yield source, NAV behavior, payout quality, data
+                  freshness, and flags—not a model portfolio or a recommendation engine.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>
+                  <strong className="text-foreground/90">Model portfolios</strong>
+                  {" "}
+                  — static templates you can riff on, not gospel.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>
+                  <strong className="text-foreground/90">GhostFlow</strong>
+                  {" "}
+                  — in development; plumbing monitor for passive-flow pressure, not a crash oracle.
+                </span>
               </li>
             </ul>
+            <div className="mt-4 flex flex-wrap items-center gap-2 pt-3 border-t border-border/60">
+              <Badge variant="secondary" className="shrink-0">
+                v0.1 / research
+              </Badge>
+              <Link
+                href={EXTERNAL_LINKS.ghostYieldApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-primary hover:underline underline-offset-2"
+              >
+                Open GhostYield
+              </Link>
+            </div>
           </CardContent>
           <CardFooter>
             <div className="flex w-full flex-col sm:flex-row gap-2">

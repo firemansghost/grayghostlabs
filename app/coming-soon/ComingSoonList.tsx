@@ -24,7 +24,7 @@ export function ComingSoonList() {
           <div className="flex overflow-x-auto gap-2 pb-1 -mx-1 px-1 sm:mx-0 sm:px-0 sm:overflow-visible sm:flex-wrap">
             <button
               onClick={() => setSelectedTag(null)}
-              className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap flex-shrink-0 ${
+              className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
                 selectedTag === null
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
@@ -36,7 +36,7 @@ export function ComingSoonList() {
               <button
                 key={tag}
                 onClick={() => setSelectedTag(tag)}
-                className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap flex-shrink-0 ${
+                className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
                   selectedTag === tag
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-muted/80"

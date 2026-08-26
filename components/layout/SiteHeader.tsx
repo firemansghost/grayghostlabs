@@ -6,7 +6,7 @@ import { mainNav, externalNav } from "@/lib/nav";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         <AppLink href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold">{siteConfig.name}</span>
@@ -40,7 +40,7 @@ export function SiteHeader() {
         {/* Mobile Menu - Native <details> element */}
         <details className="relative md:hidden group">
           <summary
-            className="list-none cursor-pointer inline-flex items-center justify-center h-10 w-10 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="list-none cursor-pointer inline-flex items-center justify-center h-10 w-10 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             aria-label="Toggle menu"
           >
             <Menu className="h-6 w-6 group-open:hidden" />

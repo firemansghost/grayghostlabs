@@ -60,7 +60,8 @@ The logo links home. Product URLs are unchanged.
 - **TypeScript**
 - **Node.js** `>=20.9.0`
 - **ESLint** CLI with flat config (`eslint.config.mjs`, `npm run lint`)
-- **Tailwind CSS** v3
+- **Tailwind CSS** 4.3 with CSS-first `@theme` tokens and `@tailwindcss/postcss`
+- Frontend targets modern browsers (Safari 16.4+, Chrome 111+, Firefox 128+)
 - **Vercel**
 - **PWA** support (`manifest.webmanifest`, icons, Apple web app metadata)
 - Generated **OG / social** assets (`/og/*`, `npm run generate:og`)

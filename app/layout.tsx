@@ -60,7 +60,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.22),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(15,23,42,0.95),_transparent_70%)]">
+        <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.22),transparent_55%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.95),transparent_70%)]">
           <SiteHeader />
           <main className="min-h-screen">{children}</main>
           <SiteFooter />

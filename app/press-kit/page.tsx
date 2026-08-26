@@ -153,6 +153,27 @@ export default function PressKitPage() {
                   </li>
                   <li>
                     <Link
+                      href={EXTERNAL_LINKS.aceSuppressorApp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                    >
+                      Ace Suppressor
+                    </Link>
+                    {" · "}
+                    <AppLink
+                      href="/sports/mlb/ace-suppressor"
+                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                    >
+                      Site overview
+                    </AppLink>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      MLB totals research and model-validation lab. Active research
+                      build targeting fuller 2027-season operation.
+                    </p>
+                  </li>
+                  <li>
+                    <Link
                       href={EXTERNAL_LINKS.ghostYieldApp}
                       target="_blank"
                       rel="noopener noreferrer"

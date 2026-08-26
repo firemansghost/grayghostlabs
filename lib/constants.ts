@@ -3,6 +3,7 @@ export const SITE_URL = "https://www.grayghostlabs.com" as const;
 export const EXTERNAL_LINKS = {
   ghostGaugeApp: "https://www.ghostgauge.com",
   gridironEdgeApp: "https://gridiron-edge-v1.vercel.app",
+  aceSuppressorApp: "https://ace-suppressor.vercel.app",
   trend100App: "https://trend100.vercel.app",
   ghostAllocatorApp: "https://ghost-allocator.vercel.app/",
   ghostFlowApp: "https://ghost-allocator.vercel.app/ghostflow",

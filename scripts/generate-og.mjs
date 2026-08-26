@@ -35,6 +35,12 @@ const CARDS = [
     subtitle: "CFB analytics • edges vs market • model lab",
   },
   {
+    out: "ace-suppressor.png",
+    title: "ACE SUPPRESSOR",
+    subtitle: "MLB Totals Research",
+    tagline: "Active Research · 2027 Season Build",
+  },
+  {
     out: "coming-soon.png",
     title: "Weapons-Grade Curiosity",
     subtitle: "Born in chaos. Assembled with caffeine. No timelines.",
@@ -47,7 +53,24 @@ const CARDS = [
 ];
 
 // Generate SVG template for OG image
-function generateSVG(title, subtitle) {
+function generateSVG(title, subtitle, tagline) {
+  const titleY = tagline ? 255 : 280;
+  const subtitleY = tagline ? 320 : 340;
+  const taglineMarkup = tagline
+    ? `
+  <text 
+    x="600" 
+    y="365" 
+    font-family="system-ui, -apple-system, sans-serif" 
+    font-size="20" 
+    font-weight="500" 
+    fill="#22c55e" 
+    text-anchor="middle"
+    letter-spacing="0.08em"
+  >${escapeXML(tagline)}</text>`
+    : "";
+  const lineY = tagline ? 400 : 380;
+
   return `
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -68,7 +91,7 @@ function generateSVG(title, subtitle) {
   <!-- Title -->
   <text 
     x="600" 
-    y="280" 
+    y="${titleY}" 
     font-family="system-ui, -apple-system, sans-serif" 
     font-size="72" 
     font-weight="700" 
@@ -80,20 +103,21 @@ function generateSVG(title, subtitle) {
   <!-- Subtitle -->
   <text 
     x="600" 
-    y="340" 
+    y="${subtitleY}" 
     font-family="system-ui, -apple-system, sans-serif" 
     font-size="28" 
     font-weight="400" 
     fill="#94a3b8" 
     text-anchor="middle"
   >${escapeXML(subtitle)}</text>
+  ${taglineMarkup}
   
   <!-- Emerald accent line -->
   <line 
     x1="200" 
-    y1="380" 
+    y1="${lineY}" 
     x2="1000" 
-    y2="380" 
+    y2="${lineY}" 
     stroke="#22c55e" 
     stroke-width="3" 
     stroke-linecap="round"
@@ -129,7 +153,9 @@ function escapeXML(str) {
 // Generate OG images
 async function generateOGImages() {
   for (const card of CARDS) {
-    const svgBuffer = Buffer.from(generateSVG(card.title, card.subtitle));
+    const svgBuffer = Buffer.from(
+      generateSVG(card.title, card.subtitle, card.tagline)
+    );
 
     await sharp(svgBuffer)
       .resize(1200, 630)

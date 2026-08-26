@@ -172,6 +172,42 @@ export default function StatusPage() {
           </CardContent>
         </Card>
 
+        {/* Active Research */}
+        <Card className="glass-panel">
+          <CardHeader>
+            <CardTitle>Active Research</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+              ACTIVE RESEARCH · 2027 SEASON BUILD
+            </p>
+            <div className="flex items-start gap-3">
+              <span className="text-primary mt-0.5">▸</span>
+              <div className="flex-1 space-y-2">
+                <h3 className="font-semibold text-sm">Ace Suppressor</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  MLB totals research, daily slate ranking, backtesting, and
+                  prospective validation.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button asChild size="sm" className="w-full sm:w-auto">
+                <Link
+                  href={EXTERNAL_LINKS.aceSuppressorApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open research app
+                </Link>
+              </Button>
+              <Button asChild variant="ghost" size="sm" className="w-full sm:w-auto">
+                <AppLink href="/sports/mlb/ace-suppressor">Learn more</AppLink>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Preview / Active Build */}
         <Card className="glass-panel">
           <CardHeader>

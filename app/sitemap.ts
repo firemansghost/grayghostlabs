@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/trend100",
     "/sports-lab",
     "/sports/cfb/gridiron-edge",
+    "/sports/mlb/ace-suppressor",
     "/coming-soon",
     "/about",
     "/press-kit",

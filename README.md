@@ -16,12 +16,20 @@ GrayGhost Labs is the public front door for data-driven tools covering Bitcoin r
 - **Trend100** — market leadership and regime dashboard (`https://trend100.vercel.app`)
 - **Gridiron Edge** — college football analytics (`https://gridiron-edge-v1.vercel.app`)
 
+### Sports Lab
+
+- **Gridiron Edge** — college football analytics (live product above)
+- **Ace Suppressor** — MLB totals research and model-validation platform
+  - Status: **ACTIVE RESEARCH · 2027 SEASON BUILD**
+  - Internal route: `/sports/mlb/ace-suppressor`
+  - Public app: `https://ace-suppressor.vercel.app`
+
 ### Site support pages
 
 - `/coming-soon` — roadmap of future experiments
 - `/about` — origin, philosophy, and contact (X DMs)
 - `/press-kit` — brand assets and boilerplate
-- `/status` — live vs preview vs next-up, plus build info
+- `/status` — live vs active research vs preview vs next-up, plus build info
 
 ## Tech Stack
 
@@ -59,6 +67,7 @@ npm run dev
 │   ├── trend100/                     # Trend100 product page
 │   ├── sports-lab/                   # Sports Lab overview
 │   ├── sports/cfb/gridiron-edge/     # Gridiron Edge product page
+│   ├── sports/mlb/ace-suppressor/    # Ace Suppressor product page
 │   ├── coming-soon/                  # Roadmap
 │   ├── about/                        # About
 │   ├── press-kit/                    # Press kit
@@ -85,10 +94,11 @@ npm run dev
 - `/trend100` — Trend100
 - `/sports-lab` — Sports Lab overview
 - `/sports/cfb/gridiron-edge` — Gridiron Edge
+- `/sports/mlb/ace-suppressor` — Ace Suppressor (ACTIVE RESEARCH · 2027 SEASON BUILD)
 - `/coming-soon` — Roadmap
 - `/about` — About
 - `/press-kit` — Press kit
-- `/status` — Live / preview / next-up and build info
+- `/status` — Live / active research / preview / next-up and build info
 
 ## Build
 

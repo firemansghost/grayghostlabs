@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
@@ -39,7 +39,7 @@ export default function StatusPage() {
   const highlights = getHighlightItems().slice(0, 3);
   const liveProjects = getLiveProjects();
   const activeResearch = getActiveResearchProjects();
-  const buildTimeFormatted = formatBuildTime(BUILD_TIME);
+  const buildTimeFormatted = COMMIT_SHA ? formatBuildTime(BUILD_TIME) : "local";
   const commitShort = formatCommitSha(COMMIT_SHA);
 
   return (
@@ -70,7 +70,7 @@ export default function StatusPage() {
         {/* Live Products */}
         <Card className="glass-panel">
           <CardHeader>
-            <CardTitle>Live Products</CardTitle>
+            <h2 className="font-semibold leading-none tracking-tight">Live Products</h2>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-3">
@@ -93,6 +93,7 @@ export default function StatusPage() {
                         rel="noopener noreferrer"
                       >
                         Open app
+                        <span className="sr-only">: {project.name}</span>
                       </Link>
                     </Button>
                     {project.id === "ghost-allocator" && (
@@ -107,7 +108,10 @@ export default function StatusPage() {
                       </Button>
                     )}
                     <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
-                      <AppLink href={project.internalPath}>Learn more</AppLink>
+                      <AppLink href={project.internalPath}>
+                        Learn more
+                        <span className="sr-only"> about {project.name}</span>
+                      </AppLink>
                     </Button>
                   </div>
                 </div>
@@ -119,7 +123,7 @@ export default function StatusPage() {
         {/* Active Research */}
         <Card className="glass-panel">
           <CardHeader>
-            <CardTitle>Active Research</CardTitle>
+            <h2 className="font-semibold leading-none tracking-tight">Active Research</h2>
           </CardHeader>
           <CardContent className="space-y-6">
             {activeResearch.map((project) => (
@@ -147,7 +151,10 @@ export default function StatusPage() {
                     </Link>
                   </Button>
                   <Button asChild variant="ghost" size="sm" className="w-full sm:w-auto">
-                    <AppLink href={project.internalPath}>Learn more</AppLink>
+                    <AppLink href={project.internalPath}>
+                      Learn more
+                      <span className="sr-only"> about {project.name}</span>
+                    </AppLink>
                   </Button>
                 </div>
               </div>
@@ -158,7 +165,7 @@ export default function StatusPage() {
         {/* Preview / Active Build */}
         <Card className="glass-panel">
           <CardHeader>
-            <CardTitle>Preview / Active Build</CardTitle>
+            <h2 className="font-semibold leading-none tracking-tight">Preview / Active Build</h2>
           </CardHeader>
           <CardContent className="space-y-3">
             <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
@@ -196,7 +203,7 @@ export default function StatusPage() {
         {/* Next Up */}
         <Card className="glass-panel">
           <CardHeader>
-            <CardTitle>Next Up</CardTitle>
+            <h2 className="font-semibold leading-none tracking-tight">Next Up</h2>
           </CardHeader>
           <CardContent className="space-y-4">
             <ul className="space-y-3">
@@ -230,7 +237,7 @@ export default function StatusPage() {
         {/* Build Info */}
         <Card className="glass-panel">
           <CardHeader>
-            <CardTitle>Build Info</CardTitle>
+            <h2 className="font-semibold leading-none tracking-tight">Build Info</h2>
           </CardHeader>
           <CardContent>
             <dl className="space-y-2 text-sm">

@@ -12,7 +12,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke-static.mjs",
     "generate:og": "node scripts/generate-og.mjs",
+    "generate:icons": "node scripts/generate-icons.mjs",
     "analyze": "cross-env ANALYZE=true next build --webpack",
     "analyze:turbopack": "next experimental-analyze -o"
   },
@@ -34,7 +36,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "16.3.3",
     "postcss": "^8.4.40",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.5.4"
   },

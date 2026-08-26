@@ -51,7 +51,7 @@
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 95%;
     --primary: 142 70% 45%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 95%;
     --muted: 0 0% 10%;
@@ -78,6 +78,11 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  a:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 
   /* Native <details>/<summary> styling for mobile menu */

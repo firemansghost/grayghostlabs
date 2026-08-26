@@ -57,14 +57,15 @@ The logo links home. Product URLs are unchanged.
 
 - **Next.js** 16 App Router (Active LTS, Turbopack by default for `next dev` and `next build`)
 - **React** 19
-- **TypeScript**
-- **Node.js** `>=20.9.0`
+- **TypeScript** (`npm run typecheck`)
+- **Node.js** `>=20.9.0` locally; GitHub Actions CI pins **Node 22**
 - **ESLint** CLI with flat config (`eslint.config.mjs`, `npm run lint`)
 - **Tailwind CSS** 4.3 with CSS-first `@theme` tokens and `@tailwindcss/postcss`
 - Frontend targets modern browsers (Safari 16.4+, Chrome 111+, Firefox 128+)
-- **Vercel**
-- **PWA** support (`manifest.webmanifest`, icons, Apple web app metadata)
+- **Vercel** (production deploys). GitHub Actions runs lint, typecheck, build, and a static-route smoke check on pull requests and pushes to `main` — it does not deploy.
+- **PWA** installable-shell support (`manifest.webmanifest`, icons, Apple web app metadata). No service worker / offline cache.
 - Generated **OG / social** assets (`/og/*`, `npm run generate:og`)
+- Bundle analysis: `npm run analyze` (Webpack) and `npm run analyze:turbopack`
 - Structured data and SEO helpers (`lib/seo.ts`, JSON-LD components, canonical metadata)
 
 ## Getting Started
@@ -133,8 +134,13 @@ npm run dev
 ## Build
 
 ```bash
+npm run lint
+npm run typecheck
 npm run build
+npm run smoke
 ```
+
+`npm run smoke` checks that the production build prerendered the public routes. It is also run in GitHub Actions after `npm run build`.
 
 ## Deploy
 

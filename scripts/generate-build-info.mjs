@@ -11,7 +11,13 @@ const outputFile = join(libDir, "buildInfo.generated.ts");
 // Ensure lib directory exists
 mkdirSync(libDir, { recursive: true });
 
-// Get build info from environment variables (Vercel provides these)
+// Vercel injects these. Skip the write locally so `npm run build`
+// does not dirty the committed placeholder used by /status.
+if (!process.env.VERCEL) {
+  console.log("✓ Skipping build-info overwrite (local). /status will show (local build).");
+  process.exit(0);
+}
+
 const buildTime = new Date().toISOString();
 const commitSha = process.env.VERCEL_GIT_COMMIT_SHA || process.env.GIT_COMMIT_SHA || null;
 const branch = process.env.VERCEL_GIT_COMMIT_REF || process.env.GIT_BRANCH || null;

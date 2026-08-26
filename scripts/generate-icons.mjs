@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { mkdirSync } from "fs";
+import { mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -11,6 +11,25 @@ const iconsDir = join(publicDir, "icons");
 
 // Ensure directories exist
 mkdirSync(iconsDir, { recursive: true });
+
+function pngToIco(pngBuffer) {
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(1, 4);
+
+  const directory = Buffer.alloc(16);
+  directory.writeUInt8(32, 0);
+  directory.writeUInt8(32, 1);
+  directory.writeUInt8(0, 2);
+  directory.writeUInt8(0, 3);
+  directory.writeUInt16LE(1, 4);
+  directory.writeUInt16LE(32, 6);
+  directory.writeUInt32LE(pngBuffer.length, 8);
+  directory.writeUInt32LE(22, 12);
+
+  return Buffer.concat([header, directory, pngBuffer]);
+}
 
 // SVG template for GrayGhost Labs icon
 // Dark background (#020617), light slate text, subtle emerald accent
@@ -67,13 +86,18 @@ async function generateIcons() {
 
   console.log("✓ Generated apple-touch-icon.png");
 
-  // Generate favicon.png (32×32, can be converted to .ico later if needed)
-  await sharp(svgBuffer)
+  // Generate favicon.png (32×32)
+  const faviconPng = await sharp(svgBuffer)
     .resize(32, 32)
     .png()
-    .toFile(join(publicDir, "favicon.png"));
+    .toBuffer();
 
+  await sharp(faviconPng).toFile(join(publicDir, "favicon.png"));
   console.log("✓ Generated favicon.png");
+
+  // Valid ICO container wrapping the PNG (not a renamed PNG).
+  writeFileSync(join(publicDir, "favicon.ico"), pngToIco(faviconPng));
+  console.log("✓ Generated favicon.ico");
 
   console.log("\n✅ All icons generated successfully!");
 }

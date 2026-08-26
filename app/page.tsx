@@ -1,18 +1,10 @@
-import dynamic from "next/dynamic";
 import { Hero } from "@/components/sections/Hero";
 import { ProductGrid } from "@/components/sections/ProductGrid";
+import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
-
-// Code-split below-the-fold components to reduce initial JS
-const NewsletterCTA = dynamic(() => import("@/components/sections/NewsletterCTA").then((mod) => ({ default: mod.NewsletterCTA })), {
-  ssr: true, // Keep SSR for SEO
-});
-
-const AboutSection = dynamic(() => import("@/components/sections/AboutSection").then((mod) => ({ default: mod.AboutSection })), {
-  ssr: true, // Keep SSR for SEO
-});
 
 export const metadata = buildMetadata({
   title: "GrayGhost Labs – Markets, Models, and Whatever Breaks Next",

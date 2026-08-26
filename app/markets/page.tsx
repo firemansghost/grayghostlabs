@@ -68,7 +68,9 @@ export default function MarketsPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold">Current tools</h2>
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {marketProjects.map((project) => (
               <Card key={project.id} className="border-2 border-primary/20">
                 <CardHeader>
@@ -124,14 +126,19 @@ export default function MarketsPage() {
                       rel="noopener noreferrer"
                     >
                       Open app
+                      <span className="sr-only">: {project.name}</span>
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="w-full sm:w-auto">
-                    <AppLink href={project.internalPath}>Learn more</AppLink>
+                    <AppLink href={project.internalPath}>
+                      Learn more
+                      <span className="sr-only"> about {project.name}</span>
+                    </AppLink>
                   </Button>
                 </CardFooter>
               </Card>
             ))}
+          </div>
           </div>
         </div>
       </div>

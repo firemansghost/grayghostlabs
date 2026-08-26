@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
@@ -23,8 +24,9 @@ export function ComingSoonList() {
           <span className="text-sm font-medium text-foreground/80 whitespace-nowrap">Filter by tag:</span>
           <div className="flex overflow-x-auto gap-2 pb-1 -mx-1 px-1 sm:mx-0 sm:px-0 sm:overflow-visible sm:flex-wrap">
             <button
+              type="button"
               onClick={() => setSelectedTag(null)}
-              className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+              className={`text-xs min-h-[44px] px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
                 selectedTag === null
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
@@ -34,9 +36,10 @@ export function ComingSoonList() {
             </button>
             {allTags.map((tag) => (
               <button
+                type="button"
                 key={tag}
                 onClick={() => setSelectedTag(tag)}
-                className={`text-xs px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+                className={`text-xs min-h-[44px] px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
                   selectedTag === tag
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-muted/80"
@@ -101,7 +104,7 @@ export function ComingSoonList() {
 
       {/* Back Link */}
       <div className="text-center pt-4">
-        <Link
+        <AppLink
           href="/"
           className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors"
         >
@@ -109,7 +112,7 @@ export function ComingSoonList() {
             ←
           </span>
           Back to GrayGhost Labs
-        </Link>
+        </AppLink>
       </div>
     </>
   );

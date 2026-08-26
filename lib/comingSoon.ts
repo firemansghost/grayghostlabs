@@ -8,67 +8,67 @@ export const COMING_SOON: ComingSoonItem[] = [
   {
     title: "Global Narrative Engine",
     description:
-      "One event. Many spins. A narrative intelligence dashboard that compares how the same world event is framed across 7–8 countries and languages — then shows what's emphasized, what's omitted, and where the stories align or diverge. Includes a side-by-side \"receipts\" view plus a Narrative Map to visualize how angles spread and drift over time.",
+      "One event. Many spins. A narrative-intelligence concept for comparing how the same event is framed across countries, languages, and media systems—showing what gets emphasized, omitted, repeated, or changed as the story moves.",
     tags: ["Geopolitics", "Media", "AI", "Analysis", "Visualization"],
   },
   {
     title: "GrayGhost Plumbing Dashboard",
     description:
-      "A live macro-stress dashboard that tracks hidden system pressure across shipping lanes, energy, sanctions enforcement, cyber posture, industrial output, and fiscal stress. Six dials roll up into one composite pressure score with clear drivers and \"GrayGhost Notes,\" built to spot regime stress before headlines catch up — and to serve as a weekly anchor link for TWIMM.",
+      "A macro-stress dashboard concept for combining pressure signals across shipping, energy, sanctions, industrial activity, fiscal stress, and other system plumbing into one readable view of where strain is building.",
     tags: ["Macro", "Dashboard", "Risk"],
   },
   {
     title: "Poverty Line Re-Calibrator",
     description:
-      "Takes official poverty thresholds and adjusts for real-world costs (housing, healthcare, food). Shows the gap between official numbers and actual survival math.",
+      "Reworks official poverty thresholds using real-world housing, healthcare, food, and regional cost assumptions to show how official definitions compare with actual household survival math.",
     tags: ["Economics", "Policy", "Data"],
   },
   {
     title: "Rate My Collapse",
     description:
-      "Tracks leading indicators of institutional/systemic breakdown. Not doomer porn — just early warning signals that most people ignore until it's too late.",
+      "An experimental systemic-risk dashboard for tracking the kinds of institutional, fiscal, infrastructure, and social stress indicators that usually get discussed separately.",
     tags: ["Macro", "Systems", "Risk"],
   },
   {
     title: "WarCast AI",
     description:
-      "AI-powered analysis of conflict escalation patterns. Reads between the lines of official statements, troop movements, and economic signals to flag when things are about to get real.",
+      "A conflict-analysis research concept for organizing escalation indicators across official statements, force posture, logistics, economic signals, and diplomatic behavior—without pretending war can be reduced to one magic probability.",
     tags: ["Geopolitics", "AI", "Risk"],
   },
   {
     title: "GhostGauge: Nations",
     description:
-      "Extends the GhostGauge risk framework to sovereign debt, currency stability, and political risk. One score per country, updated weekly.",
+      "A concept for extending the GhostGauge framework to sovereign risk using debt, currency, fiscal, external-balance, and political-stability indicators.",
     tags: ["Macro", "Sovereign", "Risk"],
   },
   {
     title: "Stablecoin Reality Check",
     description:
-      "Real-time audit of stablecoin reserves, flows, and de-pegging risk. No marketing spin — just the numbers that matter.",
+      "A stablecoin risk dashboard concept combining reserve disclosures, flows, liquidity, concentration, and de-pegging signals into a clearer view of what sits behind the peg.",
     tags: ["Crypto", "Stablecoins", "Risk"],
   },
   {
     title: "Dollar Endgame Simulator",
     description:
-      "Models different scenarios for dollar reserve status erosion. Not predicting the end — just showing what the math looks like if current trends continue.",
+      "A scenario simulator for exploring what gradual erosion of dollar reserve dominance could mean for rates, capital flows, currencies, commodities, and U.S. financing conditions.",
     tags: ["Macro", "Currency", "Simulation"],
   },
   {
     title: "Incident Command AI Trainer",
     description:
-      "AI-powered training scenarios for fire service incident commanders. Simulates complex multi-unit responses with realistic chaos and decision points.",
+      "An AI-assisted fire-service training concept built around evolving incident-command scenarios, incomplete information, resource constraints, and decision points.",
     tags: ["Fire Service", "Training", "AI"],
   },
   {
     title: "ESO Sanity Tools",
     description:
-      "Tools for Emergency Service Officers: shift planning, resource allocation, and sanity checks for when the system is asking too much.",
+      "A collection of practical fire-service operations utilities for shift planning, resource checks, workflow sanity checks, and other small problems that should not require another spreadsheet.",
     tags: ["Fire Service", "Operations", "Tools"],
   },
   {
     title: "GhostBrief (working title)",
     description:
-      "AI-powered briefing generator for complex topics. Takes dense reports, policy docs, or news cycles and produces executive summaries that don't leave out the important parts.",
+      "A briefing-tool concept for turning dense reports, policy documents, research, and fast-moving news cycles into concise executive summaries while preserving sources, uncertainty, and the details that actually matter.",
     tags: ["AI", "Productivity", "Media"],
   },
 ];

@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "About GrayGhost Labs",
   description:
-    "GrayGhost Labs is a one-person lab built by a stubborn firefighter who mixes fire service experience, macro analysis, and sports models into oddly useful tools.",
+    "GrayGhost Labs is a one-person lab built by a stubborn firefighter who mixes fire service experience, markets research, and sports models into oddly useful tools.",
   path: "/about",
   ogImage: "/og/default.png",
 });
@@ -41,7 +41,9 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold">Origin Story</h2>
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
-              GrayGhost Labs started as my digital junkyard: ex-IT professional, macro/crypto/sports data addict, and yes… firefighter. The tools are the coping mechanism.
+              GrayGhost Labs started as my digital junkyard: a place to park
+              questions that wouldn&apos;t stay inside a spreadsheet. The tools
+              are the coping mechanism.
             </p>
             <p>
               Everything here was built first for personal use and friends, then
@@ -57,10 +59,12 @@ export default function AboutPage() {
           <h2 className="text-xl font-semibold">Who is GrayGhost?</h2>
           <p className="text-sm text-muted-foreground">
             GrayGhost is the pen name for a stubborn 30+ year firefighter who
-            spends off days buried in macro charts, Bitcoin data, and college
-            football box scores. By day it&apos;s fire trucks and medical calls; by
-            night it&apos;s spreadsheets, models, and asking why the market or the
-            oddsmakers just did what they did.
+            spends off days buried in macro charts, Bitcoin data, market
+            structure, portfolio research, sports models, and whatever new
+            dataset has created a question he can&apos;t leave alone. By day
+            it&apos;s fire trucks and medical calls; by night it&apos;s
+            spreadsheets, models, and asking why the market or the oddsmakers
+            just did what they did.
           </p>
           <p className="text-sm text-muted-foreground">
             The persona is simple: take the curiosity of a markets nerd, the dark
@@ -88,34 +92,41 @@ export default function AboutPage() {
                     <strong className="text-foreground">Tools &gt; takes</strong>
                     <span className="text-foreground/80">
                       {" "}
-                      – Build things that solve problems, not things that solve
-                      for engagement.
+                      – Build things that solve problems, not things designed
+                      mainly to generate engagement.
                     </span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1 text-xl">•</span>
                   <div>
-                    <strong className="text-foreground">
-                      Show the PnL, not just the winner screenshots
-                    </strong>
+                    <strong className="text-foreground">Show the receipts</strong>
                     <span className="text-foreground/80">
                       {" "}
-                      – If a model can&apos;t beat the market over time, it&apos;s
-                      not an edge. Transparency matters.
+                      – Freeze the rules, track the results, document the misses,
+                      and don&apos;t rewrite the story after the fact.
                     </span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1 text-xl">•</span>
                   <div>
-                    <strong className="text-foreground">
-                      No subscription funnel right now
-                    </strong>
+                    <strong className="text-foreground">Uncertainty is allowed</strong>
                     <span className="text-foreground/80">
                       {" "}
-                      – Build trust first, then maybe we&apos;ll talk. For now,
-                      everything is free and public.
+                      – A useful model does not need to pretend certainty exists.
+                      Confidence, limits, and missing data are part of the answer.
+                    </span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1 text-xl">•</span>
+                  <div>
+                    <strong className="text-foreground">If it breaks, say so</strong>
+                    <span className="text-foreground/80">
+                      {" "}
+                      – Models decay. Data fails. Assumptions stop working. Fix
+                      it, document it, or retire it.
                     </span>
                   </div>
                 </li>
@@ -133,26 +144,36 @@ export default function AboutPage() {
             a problem that keeps showing up at work or in the markets. The workflow is
             the same every time:
           </p>
-          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-2">
             <li>
-              Start with the real question – What decision am I trying to make, or
-              what lie is the chart telling me?
+              <strong className="text-foreground/90">Start with the real question</strong>
+              {" "}
+              – What decision or uncertainty are we actually trying to understand?
             </li>
             <li>
-              Collect boring but reliable data – Market feeds, public stats, or
-              internal records.
+              <strong className="text-foreground/90">Collect boring, defensible data</strong>
+              {" "}
+              – Reliable inputs before clever models.
             </li>
             <li>
-              Build a simple, testable model – Something that can be checked against
-              history, not just vibes.
+              <strong className="text-foreground/90">Define the rules before looking at the answer</strong>
+              {" "}
+              – Avoid changing the test just because the result is inconvenient.
             </li>
             <li>
-              Track results over time – If it doesn&apos;t hold up, fix it or throw
-              it away.
+              <strong className="text-foreground/90">Track the receipts</strong>
+              {" "}
+              – Backtests, prospective results, failures, missing data, and revisions.
             </li>
             <li>
-              Only then put a UI on top – Once it&apos;s useful, it becomes a
-              GhostGauge view, a Gridiron Edge screen, or some other ghost utility.
+              <strong className="text-foreground/90">Fix it or kill it</strong>
+              {" "}
+              – If the model does not survive contact with reality, change it or retire it.
+            </li>
+            <li>
+              <strong className="text-foreground/90">UI comes last</strong>
+              {" "}
+              – A project becomes a public GrayGhost tool only after it is useful enough to earn one.
             </li>
           </ul>
           <p className="text-sm text-muted-foreground">

@@ -68,9 +68,14 @@ export default function SportsLabPage() {
       <div className="container px-4 py-10 sm:py-14 md:py-16">
         <div className="max-w-4xl mx-auto space-y-12">
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            Sports Lab – Where Numbers Talk Trash
-          </h1>
+          <div className="space-y-2">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              Sports Lab
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              Where Numbers Talk Trash
+            </p>
+          </div>
           <p className="text-lg text-foreground/80 leading-relaxed">
             The Sports Lab is where the models get tested before anybody starts
             believing their own press releases. College football lives here. MLB

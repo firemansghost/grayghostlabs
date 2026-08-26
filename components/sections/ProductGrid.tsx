@@ -87,15 +87,11 @@ export function ProductGrid() {
                 <ul className="space-y-2 text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Five-pillar composite risk model</span>
+                    <span>Five-pillar composite Bitcoin risk model</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span>Risk bands + Risk-Based DCA context</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Transparent methodology, not black-box signals</span>
                   </li>
                 </ul>
               </CardContent>
@@ -114,36 +110,17 @@ export function ProductGrid() {
                 </div>
                 <CardDescription>{ghostAllocator.shortDescription}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-                  Inside the hub
+              <CardContent className="space-y-2">
+                <p className="text-sm text-foreground/80">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                    Inside the hub:
+                  </span>{" "}
+                  GhostRegime · GhostYield · GhostFlow Preview
                 </p>
-                <ul className="space-y-2 text-sm text-foreground/80">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground/90">GhostRegime</strong>
-                      {" "}
-                      — market regime and risk posture
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground/90">GhostYield</strong>
-                      {" "}
-                      — income-sleeve research
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground/90">GhostFlow</strong>
-                      {" "}
-                      — PREVIEW · ACTIVE BUILD
-                    </span>
-                  </li>
-                </ul>
+                <p className="text-sm text-foreground/80">
+                  One research hub for allocation, regime, income, and market
+                  structure.
+                </p>
               </CardContent>
               <CardFooter>
                 <ProjectActions project={ghostAllocator} />
@@ -164,15 +141,16 @@ export function ProductGrid() {
                 <ul className="space-y-2 text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Multiple market decks covering leadership and macro-sensitive groups</span>
+                    <span>
+                      Market leadership, participation, and overextension across
+                      multiple decks
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Health + heat distinguish broad trend from froth</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Historical and turbulence views help identify changing regime conditions</span>
+                    <span>
+                      Historical + turbulence views for changing regime conditions
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -205,15 +183,11 @@ export function ProductGrid() {
                 <ul className="space-y-2 text-sm text-foreground/80">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Power ratings and model-vs-market matchup analysis</span>
+                    <span>Power ratings and model-vs-market matchup research</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>Spreads, totals, and results evaluation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Active 2026 season work — research, not a claimed betting edge</span>
+                    <span>Spreads, totals, and season-long results evaluation</span>
                   </li>
                 </ul>
               </CardContent>
@@ -240,7 +214,7 @@ export function ProductGrid() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span>No active betting recommendations</span>
+                    <span>Historical + prospective validation</span>
                   </li>
                 </ul>
               </CardContent>

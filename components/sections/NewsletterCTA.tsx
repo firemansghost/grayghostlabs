@@ -12,10 +12,10 @@ export function NewsletterCTA() {
               Newsletter – This Week in Macro Mayhem
             </h2>
             <p className="text-sm text-muted-foreground">
-              A weekly-ish rundown of macro, Bitcoin, markets, and whatever
-              blew up in the news this week, plus the occasional sports model rant. Charts,
-              receipts, and gallows humor from the same brain that built
-              GhostGauge, Ghost Allocator (and its hub tools), Trend100, and Gridiron Edge.
+              A weekly-ish rundown of macro, markets, Bitcoin, geopolitics, and
+              whatever broke the narrative this week. Charts, receipts, and
+              gallows humor from the same lab that keeps building tools to make
+              sense of it.
             </p>
             <p className="text-xs text-muted-foreground italic">
               The only newsletter where geopolitics and gallows humor collide

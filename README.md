@@ -55,9 +55,12 @@ The logo links home. Product URLs are unchanged.
 
 ## Tech Stack
 
-- **Next.js** App Router
+- **Next.js** 16 App Router (Active LTS, Turbopack by default for `next dev` and `next build`)
+- **React** 19
 - **TypeScript**
-- **Tailwind CSS**
+- **Node.js** `>=20.9.0`
+- **ESLint** CLI with flat config (`eslint.config.mjs`, `npm run lint`)
+- **Tailwind CSS** v3
 - **Vercel**
 - **PWA** support (`manifest.webmanifest`, icons, Apple web app metadata)
 - Generated **OG / social** assets (`/og/*`, `npm run generate:og`)

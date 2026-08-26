@@ -2,7 +2,9 @@
 import bundleAnalyzer from "@next/bundle-analyzer";
 
 const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
+  enabled: true,
+  analyzerMode: "static",
+  openAnalyzer: false,
 });
 
 const nextConfig = {
@@ -17,5 +19,8 @@ const nextConfig = {
   },
 };
 
-export default withBundleAnalyzer(nextConfig);
-
+// Only wrap when analyzing. @next/bundle-analyzer injects a webpack() hook
+// even when disabled, which makes Next 16 refuse a default Turbopack build.
+export default process.env.ANALYZE === "true"
+  ? withBundleAnalyzer(nextConfig)
+  : nextConfig;

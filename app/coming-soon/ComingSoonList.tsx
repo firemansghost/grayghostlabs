@@ -1,23 +1,19 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EXTERNAL_LINKS } from "@/lib/constants";
-import { COMING_SOON, getAllTags, type ComingSoonItem } from "@/lib/comingSoon";
+import { COMING_SOON, getAllTags } from "@/lib/comingSoon";
 
 export function ComingSoonList() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const allTags = getAllTags();
-
-  const filteredItems = useMemo(() => {
-    if (!selectedTag) {
-      return COMING_SOON;
-    }
-    return COMING_SOON.filter((item) => item.tags.includes(selectedTag));
-  }, [selectedTag]);
+  const filteredItems = selectedTag
+    ? COMING_SOON.filter((item) => item.tags.includes(selectedTag))
+    : COMING_SOON;
 
   return (
     <>

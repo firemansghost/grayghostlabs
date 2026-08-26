@@ -1,5 +1,4 @@
 import * as React from "react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export interface ButtonProps
@@ -28,9 +27,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className
     );
 
-    if (asChild && React.isValidElement(children)) {
-      return React.cloneElement(children as React.ReactElement<any>, {
-        className: cn(baseClasses, (children as React.ReactElement<any>).props.className),
+    if (asChild && React.isValidElement<{ className?: string; ref?: React.Ref<HTMLButtonElement> }>(children)) {
+      return React.cloneElement(children, {
+        className: cn(baseClasses, children.props.className),
         ref,
       });
     }

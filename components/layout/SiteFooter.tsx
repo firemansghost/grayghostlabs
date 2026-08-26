@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { AppLink } from "@/components/ui/app-link";
 import { EXTERNAL_LINKS } from "@/lib/constants";
-import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -48,12 +47,6 @@ export function SiteFooter() {
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Newsletter
-            </Link>
-            <Link
-              href={siteConfig.links.email}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Email GrayGhost
             </Link>
           </div>
         </div>

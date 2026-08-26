@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "GhostGauge – Bitcoin Risk Dashboard",
   description:
-    "GhostGauge wraps Bitcoin's macro, flow, and sentiment signals into a single 0–100 BTC G-Score with simple risk bands built for DCA and sanity checks.",
+    "A five-pillar Bitcoin risk dashboard that compresses market conditions into a daily 0–100 G-Score, with risk bands and Risk-Based DCA context. Transparent methodology—not personalized advice.",
   path: "/ghostgauge",
   ogImage: "/og/ghostgauge.png",
 });
@@ -21,7 +21,7 @@ export default function GhostGaugePage() {
     "@type": "WebApplication",
     name: "GhostGauge",
     description:
-      "A Bitcoin risk dashboard that turns market data into a clearer risk signal (G-Score + bands).",
+      "A five-pillar Bitcoin risk dashboard that compresses market conditions into a daily 0–100 G-Score, with risk bands and Risk-Based DCA context.",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     url: EXTERNAL_LINKS.ghostGaugeApp,
@@ -56,10 +56,11 @@ export default function GhostGaugePage() {
             GhostGauge – Bitcoin Risk, Condensed
           </h1>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            GhostGauge wraps Bitcoin&apos;s macro, flow, and sentiment signals
-            into a single 0–100 risk score. It&apos;s built for people who DCA,
-            rebalance, and occasionally panic—so they can do less panicking and
-            more thinking.
+            GhostGauge is a five-pillar Bitcoin risk dashboard that compresses
+            market conditions into a daily 0–100 G-Score. Higher score means
+            higher market risk. Risk bands and a Risk-Based DCA framework give
+            context for accumulating, sitting tight, or taking risk off—without
+            pretending to be personalized financial advice.
           </p>
         </div>
 

@@ -16,22 +16,23 @@ export function ProductGrid() {
           <CardHeader>
             <CardTitle>GhostGauge – Bitcoin Risk Dashboard</CardTitle>
             <CardDescription>
-              A single score for Bitcoin risk and macro conditions.
+              A five-pillar Bitcoin risk dashboard that compresses market conditions into
+              a daily 0–100 G-Score.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm text-foreground/80">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Combines macro, flows, momentum, and structure</span>
+                <span>Five-pillar composite risk model</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Simple 0–100 risk score</span>
+                <span>Risk bands + Risk-Based DCA context</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Built for DCA and sanity checks, not day-trading hopium</span>
+                <span>Transparent methodology, not black-box signals</span>
               </li>
             </ul>
           </CardContent>
@@ -103,7 +104,7 @@ export function ProductGrid() {
                 <span>
                   <strong className="text-foreground/90">GhostFlow</strong>
                   {" "}
-                  — passive-pressure dashboard in development
+                  — public preview of the passive-pressure / market-structure dashboard
                 </span>
               </li>
             </ul>
@@ -134,22 +135,22 @@ export function ProductGrid() {
           <CardHeader>
             <CardTitle>Gridiron Edge – College Football</CardTitle>
             <CardDescription>
-              Model-driven spreads, totals, and season-long PnL tracking.
+              College football analytics: power ratings, matchup analysis, and model-vs-market spreads and totals.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm text-foreground/80">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Power ratings & model vs market edges</span>
+                <span>Power ratings and model-vs-market matchup analysis</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Week review + season review dashboards</span>
+                <span>Spreads, totals, and results evaluation</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Built to test strategies, not just vibes</span>
+                <span>Active 2026 season work — research, not a claimed betting edge</span>
               </li>
             </ul>
           </CardContent>
@@ -181,22 +182,23 @@ export function ProductGrid() {
               <Badge className="shrink-0">LIVE</Badge>
             </div>
             <CardDescription>
-              A market leadership command center tracking trend breadth and overextension across multiple “decks”—so you can see regime shifts before headlines catch up.
+              A market leadership and regime dashboard tracking participation,
+              overextension, turbulence, and market plumbing across multiple decks.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm text-foreground/80">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>100 high-liquidity tickers across key groups</span>
+                <span>Multiple market decks covering leadership and macro-sensitive groups</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Health + heat to separate trend from froth</span>
+                <span>Health + heat distinguish broad trend from froth</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
-                <span>Built for macro context without headline noise</span>
+                <span>Historical and turbulence views help identify changing regime conditions</span>
               </li>
             </ul>
           </CardContent>

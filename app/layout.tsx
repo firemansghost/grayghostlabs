@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "GrayGhost Labs – Data-Driven Tools for Bitcoin and Ball",
+    title: "GrayGhost Labs – Data-Driven Tools for Markets, Models, and Sports",
     description:
-      "GrayGhost Labs is a small collection of obsessively-built tools for markets and sports: Bitcoin risk dashboards, college football models, and other experiments that probably took way too many hours.",
+      "GrayGhost Labs is a collection of obsessively built tools for market risk, portfolio research, sports analytics, and other problems that refused to stay inside a spreadsheet.",
   }),
   manifest: "/manifest.webmanifest",
   icons: {

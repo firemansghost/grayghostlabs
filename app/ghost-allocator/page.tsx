@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Ghost Allocator – Portfolio Research Hub (457-Aware)",
   description:
-    "Pension-aware 457 hub: core allocator, GhostRegime, GhostYield income-sleeve research, model portfolios, and GhostFlow (passive-pressure monitor, in development).",
+    "Pension-aware 457 hub: core allocator, GhostRegime, GhostYield income-sleeve research, model portfolios, and GhostFlow public preview (passive-pressure / market-structure dashboard).",
   path: "/ghost-allocator",
   ogImage: "/og/ghost-allocator.png",
 });
@@ -21,7 +21,7 @@ export default function GhostAllocatorPage() {
     "@type": "WebApplication",
     name: "Ghost Allocator",
     description:
-      "Portfolio research hub for building around a pension-aware 457 framework: core allocator, GhostRegime risk posture, GhostYield income-sleeve research, model portfolios, and GhostFlow passive-pressure dashboard (in development).",
+      "Portfolio research hub for building around a pension-aware 457 framework: core allocator, GhostRegime risk posture, GhostYield income-sleeve research, model portfolios, and GhostFlow public preview of the passive-pressure / market-structure dashboard.",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     url: EXTERNAL_LINKS.ghostAllocatorApp,
@@ -59,9 +59,10 @@ export default function GhostAllocatorPage() {
             Ghost Allocator is a portfolio research hub for building around a
             pension-aware 457 framework. Inside one roof you get the core
             allocator, GhostRegime for risk posture, GhostYield for income-sleeve
-            research (v0.1), static model portfolios, and—in development—GhostFlow,
-            a passive-pressure dashboard for market structure. Still roughly right,
-            not perfectly wrong—and still allergic to options chains.
+            research (v0.1), static model portfolios, and GhostFlow—a public
+            preview of the passive-pressure / market-structure dashboard. Still
+            roughly right, not perfectly wrong—and still allergic to options
+            chains.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
             <strong className="text-foreground/90">GhostYield</strong> compares
@@ -71,11 +72,10 @@ export default function GhostAllocatorPage() {
             engine, not a substitute for reading the boring stuff yourself.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            <strong className="text-foreground/90">GhostFlow</strong> (
-            <em>not live yet</em>
-            ) tracks passive-flow pressure, ETF issuance, index concentration,
-            volatility mechanics, systematic-flow proxies, and structural
-            fragility.{" "}
+            <strong className="text-foreground/90">GhostFlow</strong> is a
+            public preview in active development. It tracks passive-flow
+            pressure, ETF issuance, index concentration, volatility mechanics,
+            systematic-flow proxies, and structural fragility.{" "}
             <strong className="text-foreground/90">
               Not a crash predictor.
             </strong>{" "}
@@ -136,12 +136,15 @@ export default function GhostAllocatorPage() {
             <li className="flex items-start gap-3">
               <span className="text-primary mt-1 text-xl">•</span>
               <div>
-                <strong className="text-foreground">GhostFlow (in development)</strong>
+                <strong className="text-foreground">
+                  GhostFlow (PREVIEW · ACTIVE BUILD)
+                </strong>
                 <span className="text-foreground/80">
                   {" "}
-                  — Passive pressure / market-structure fragility dashboard. Not
-                  predictive—just checks whether the plumbing is making weird
-                  noises.
+                  — Public preview of the passive-pressure / market-structure
+                  research dashboard. Active development—not a finished product
+                  and not a crash predictor. Just checks whether the plumbing is
+                  making weird noises.
                 </span>
               </div>
             </li>
@@ -173,6 +176,15 @@ export default function GhostAllocatorPage() {
                     rel="noopener noreferrer"
                   >
                     Open Ghost Allocator
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link
+                    href={EXTERNAL_LINKS.ghostFlowApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open GhostFlow Preview
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">

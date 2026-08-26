@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
-import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({

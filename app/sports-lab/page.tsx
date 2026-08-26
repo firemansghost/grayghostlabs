@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Sports Lab – Where Numbers Talk Trash",
   description:
-    "The Sports Lab is where Gridiron Edge and future sports models live: power ratings, edges vs the market, and season-long tracking.",
+    "The Sports Lab is where Gridiron Edge and future sports models live: power ratings, matchup analysis, and results evaluation for the 2026 college football season.",
   path: "/sports-lab",
   ogImage: "/og/default.png",
 });
@@ -61,10 +61,10 @@ export default function SportsLabPage() {
             Sports Lab – Where Numbers Talk Trash
           </h1>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            The Sports Lab is where all the college football and (eventually)
-            other sports models live. Think power ratings, edges vs the market,
-            and season-long PnL tracking—not &quot;my gut says this backup QB
-            is due.&quot;
+            The Sports Lab is where college football models live today, with
+            other sports experiments in the pipeline. Think power ratings,
+            matchup analysis, and results evaluation for the 2026 season—not
+            &quot;my gut says this backup QB is due.&quot;
           </p>
         </div>
 
@@ -73,8 +73,8 @@ export default function SportsLabPage() {
           <CardHeader>
             <CardTitle className="text-2xl">Gridiron Edge – College Football</CardTitle>
             <CardDescription className="text-base">
-              Power ratings, spreads, totals, and result tracking for the sickos
-              who bet Wednesday MACtion.
+              Power ratings, matchup analysis, spreads, totals, and results
+              evaluation—active 2026 season work, not a claimed betting edge.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -90,8 +90,7 @@ export default function SportsLabPage() {
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>
                 <span>
-                  Week review and season review to see if the model is actually
-                  earning its oats
+                  Week review and season review to evaluate how projections held up
                 </span>
               </li>
             </ul>

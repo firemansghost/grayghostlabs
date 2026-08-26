@@ -15,9 +15,9 @@ const AboutSection = dynamic(() => import("@/components/sections/AboutSection").
 });
 
 export const metadata = buildMetadata({
-  title: "GrayGhost Labs – Tools for Bitcoin, Ball, and Whatever Breaks Next",
+  title: "GrayGhost Labs – Markets, Models, and Whatever Breaks Next",
   description:
-    "GhostGauge for Bitcoin risk, Gridiron Edge for college football analytics, and more Ghost utilities as time and rage allow.",
+    "GrayGhost Labs builds data-driven tools for Bitcoin risk, portfolio research, market structure, and sports analytics—plus experiments born from problems too specific for normal software.",
   path: "/",
   ogImage: "/og/home.png",
 });

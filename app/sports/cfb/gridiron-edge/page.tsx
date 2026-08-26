@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Gridiron Edge – College Football Analytics",
   description:
-    "Model-driven power ratings, projected spreads/totals, and PnL tracking for college football sickos who want to test betting ideas against real numbers.",
+    "College football analytics: power ratings, matchup and model-vs-market analysis, spreads and totals, and results evaluation. Active 2026 season work—not a claimed betting edge.",
   path: "/sports/cfb/gridiron-edge",
   ogImage: "/og/gridiron-edge.png",
 });
@@ -21,7 +21,7 @@ export default function GridironEdgeCFBPage() {
     "@type": "WebApplication",
     name: "Gridiron Edge",
     description:
-      "Model-driven power ratings, projected spreads/totals, and PnL tracking for college football analytics and model comparisons.",
+      "College football analytics: power ratings, matchup and model-vs-market analysis, spreads and totals, and results evaluation for the 2026 season.",
     applicationCategory: "SportsApplication",
     operatingSystem: "Any",
     url: EXTERNAL_LINKS.gridironEdgeApp,
@@ -57,8 +57,8 @@ export default function GridironEdgeCFBPage() {
             Gridiron Edge – College Football
           </h1>
           <p className="text-xl text-muted-foreground">
-            Power ratings, spreads, totals, and result tracking for the sickos
-            who bet Wednesday MACtion.
+            Power ratings, matchup analysis, spreads, totals, and results
+            evaluation—active 2026 season work, not a claimed betting edge.
           </p>
         </div>
 
@@ -69,18 +69,19 @@ export default function GridironEdgeCFBPage() {
             <p>
               Gridiron Edge – CFB ingests schedule, odds, and results to compute
               power ratings and model spreads/totals. It compares model lines vs
-              market and surfaces ATS/OU &quot;edges&quot; that might actually
-              mean something.
+              market and surfaces matchup context so you can see where the model
+              and the board disagree.
             </p>
             <p>
-              The app tracks PnL using a synthetic &quot;Official $100
-              Flat&quot; strategy (and others later), so you can see if the
-              model is actually beating the market or just making pretty charts.
+              The app also evaluates results after the fact—week review and
+              season review—so you can check how projections held up. That is
+              research and bookkeeping, not a validated betting edge.
             </p>
             <p>
-              Everything is built to test strategies, not just vibes. If the
-              model can&apos;t beat the closing line over a season, it&apos;s
-              not an edge—it&apos;s noise.
+              Current focus is 2026 season readiness: ratings, matchups,
+              spreads/totals, and honest results tracking. If the model
+              can&apos;t beat the closing line over a season, it&apos;s not an
+              edge—it&apos;s noise.
             </p>
           </div>
         </section>
@@ -95,8 +96,8 @@ export default function GridironEdgeCFBPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  See all games with market spread/total vs model spread/total,
-                  ATS edges, and model confidence.
+                  See all games with market spread/total vs model spread/total
+                  and matchup context.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -108,8 +109,7 @@ export default function GridironEdgeCFBPage() {
               <CardContent>
                 <CardDescription>
                   Deep dive into a single game: power ratings, home-field
-                  advantage, ATS & totals analysis, model vs market view, and
-                  betting ticket style summary.
+                  advantage, totals analysis, and model vs market view.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -123,8 +123,7 @@ export default function GridironEdgeCFBPage() {
               <CardContent>
                 <CardDescription>
                   Review how the model did vs the closing line and final score,
-                  plus see PnL and ROI over the season for a given strategy tag
-                  like official_flat_100.
+                  plus season-long results evaluation.
                 </CardDescription>
               </CardContent>
             </Card>

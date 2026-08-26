@@ -12,12 +12,6 @@ export const COMING_SOON: ComingSoonItem[] = [
     tags: ["Geopolitics", "Media", "AI", "Analysis", "Visualization"],
   },
   {
-    title: "GhostFlow: Passive Pressure Gauge",
-    description:
-      "Tracks the market's mechanical bid: passive share proxies, ETF flows, index concentration, volatility mechanics, systematic-flow pressure, and structural fragility. Not a crash predictor. A smoke alarm for price discovery. In development inside Ghost Allocator.",
-    tags: ["Market Structure", "Macro", "Risk", "Dashboard", "Passive Flows"],
-  },
-  {
     title: "GrayGhost Plumbing Dashboard",
     description:
       "A live macro-stress dashboard that tracks hidden system pressure across shipping lanes, energy, sanctions enforcement, cyber posture, industrial output, and fiscal stress. Six dials roll up into one composite pressure score with clear drivers and \"GrayGhost Notes,\" built to spot regime stress before headlines catch up — and to serve as a weekly anchor link for TWIMM.",
@@ -81,9 +75,9 @@ export const COMING_SOON: ComingSoonItem[] = [
 
 // Curated highlights for homepage card (3 items) — order preserved for preview list
 export const COMING_SOON_HIGHLIGHTS = [
-  "GhostFlow: Passive Pressure Gauge",
   "Global Narrative Engine",
   "GrayGhost Plumbing Dashboard",
+  "Incident Command AI Trainer",
 ] as const;
 
 // Helper to get highlight items from COMING_SOON (order matches COMING_SOON_HIGHLIGHTS)

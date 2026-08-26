@@ -16,6 +16,9 @@ export function buildMetadata(config: SeoConfig): Metadata {
   return {
     title: config.title,
     description: config.description,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: config.title,
       description: config.description,

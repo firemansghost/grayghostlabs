@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Trend100 | GrayGhost Labs",
   description:
-    "Momentum + breadth across market leadership decks—track trend health, participation, and overextension without the headline noise.",
+    "A market leadership and regime dashboard tracking participation, overextension, turbulence, and market plumbing across multiple decks. A flashlight, not a prophecy.",
   path: "/trend100",
   ogImage: "/og/default.png",
 });
@@ -29,7 +29,7 @@ export default function Trend100Page() {
     "@type": "WebApplication",
     name: "Trend100",
     description:
-      "Momentum + breadth across market leadership decks. Tracks trend health, participation, and overextension (heat) to spot regime shifts early.",
+      "A market leadership and regime dashboard tracking participation, overextension, turbulence, and market plumbing across multiple decks.",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     url: EXTERNAL_LINKS.trend100App,
@@ -56,7 +56,7 @@ export default function Trend100Page() {
         type="WebPage"
         name="Trend100"
         path="/trend100"
-        description="Momentum + breadth across market leadership decks."
+        description="A market leadership and regime dashboard tracking participation, overextension, turbulence, and market plumbing across multiple decks."
         id="jsonld-trend100-page"
       />
 
@@ -66,13 +66,13 @@ export default function Trend100Page() {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold">Trend100</h1>
             <p className="text-xl text-muted-foreground">
-              Momentum + breadth across market leadership “decks”
+              Market leadership and regime context across multiple decks
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Trend100 tracks trend health across key market groups using price
-              vs long-term baselines and breadth participation. It also flags
-              overextension (“heat” / upper-band stretch) so you can tell the
-              difference between a healthy trend and a frothy one.
+              Trend100 tracks participation, overextension, turbulence, and
+              market plumbing across multiple decks. Health and heat help
+              distinguish a broad trend from froth; historical and turbulence
+              views add regime context. It does not predict the next move.
             </p>
           </div>
 
@@ -86,28 +86,37 @@ export default function Trend100Page() {
                   <strong className="text-foreground">Multiple decks</strong>
                   <span className="text-foreground/80">
                     {" "}
-                    – macro, sectors, factors, fixed income, global equities,
-                    metals/miners.
+                    – leadership and macro-sensitive groups, not a single 100-ticker list.
                   </span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1 text-xl">•</span>
                 <div>
-                  <strong className="text-foreground">Group filters</strong>
+                  <strong className="text-foreground">Health + heat</strong>
                   <span className="text-foreground/80">
                     {" "}
-                    – where applicable (e.g., metals vs miners).
+                    – participation versus overextension, so you can tell a broad trend from froth.
                   </span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1 text-xl">•</span>
                 <div>
-                  <strong className="text-foreground">Overextension signals</strong>
+                  <strong className="text-foreground">Historical health</strong>
                   <span className="text-foreground/80">
                     {" "}
-                    – alternate chart metrics to spot saturation / stretch.
+                    – look back at how participation has evolved, not just today&apos;s snapshot.
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1 text-xl">•</span>
+                <div>
+                  <strong className="text-foreground">Turbulence and plumbing</strong>
+                  <span className="text-foreground/80">
+                    {" "}
+                    – regime and market-structure context when conditions get noisy.
                   </span>
                 </div>
               </li>
@@ -120,7 +129,7 @@ export default function Trend100Page() {
             <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
               <li>Health = broad participation (trend strength)</li>
               <li>Heat / % Upper = how stretched it is</li>
-              <li>Stretch / Med Upper = how far above normal the move is</li>
+              <li>Turbulence and plumbing = regime context, not a forecast</li>
             </ul>
           </section>
 

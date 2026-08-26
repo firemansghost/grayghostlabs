@@ -4,9 +4,13 @@ Marketing and hub site for the GrayGhost Labs ecosystem.
 
 ## Overview
 
-GrayGhost Labs is the public front door for data-driven tools covering Bitcoin risk, portfolio research, market structure, sports analytics, and experiments that started as personal annoyances.
+GrayGhost Labs is organized around three public hubs:
 
-### Live products
+- **Markets** (`/markets`) — Bitcoin risk, portfolio research, and market leadership
+- **Sports Lab** (`/sports-lab`) — college football analytics and MLB research
+- **Roadmap** (`/coming-soon`) — future experiments still on the workbench
+
+### Markets
 
 - **GhostGauge** — five-pillar Bitcoin risk dashboard with a daily 0–100 G-Score (`https://www.ghostgauge.com`)
 - **Ghost Allocator** — pension-aware 457 portfolio research hub (`https://ghost-allocator.vercel.app/`)
@@ -14,11 +18,10 @@ GrayGhost Labs is the public front door for data-driven tools covering Bitcoin r
   - **GhostYield** — income-sleeve research
   - **GhostFlow** — public preview of the passive-pressure / market-structure dashboard (`https://ghost-allocator.vercel.app/ghostflow`)
 - **Trend100** — market leadership and regime dashboard (`https://trend100.vercel.app`)
-- **Gridiron Edge** — college football analytics (`https://gridiron-edge-v1.vercel.app`)
 
 ### Sports Lab
 
-- **Gridiron Edge** — college football analytics (live product above)
+- **Gridiron Edge** — college football analytics (`https://gridiron-edge-v1.vercel.app`)
 - **Ace Suppressor** — MLB totals research and model-validation platform
   - Status: **ACTIVE RESEARCH · 2027 SEASON BUILD**
   - Internal route: `/sports/mlb/ace-suppressor`
@@ -26,10 +29,29 @@ GrayGhost Labs is the public front door for data-driven tools covering Bitcoin r
 
 ### Site support pages
 
+- `/` — homepage (Current Work grouped by Markets, Sports Research, and Roadmap)
 - `/coming-soon` — roadmap of future experiments
 - `/about` — origin, philosophy, and contact (X DMs)
 - `/press-kit` — brand assets and boilerplate
 - `/status` — live vs active research vs preview vs next-up, plus build info
+
+## Navigation
+
+Header (zero-JS, native `<details>` on mobile):
+
+- Markets → `/markets`
+- Sports Lab → `/sports-lab`
+- Roadmap → `/coming-soon`
+- About → `/about`
+- Newsletter and X / Twitter remain external
+
+The logo links home. Product URLs are unchanged.
+
+## Data sources
+
+- `lib/projects.ts` — current public project catalog (names, status, category, URLs, short descriptions)
+- `lib/comingSoon.ts` — future-project roadmap source
+- `lib/constants.ts` — `SITE_URL` and `EXTERNAL_LINKS`
 
 ## Tech Stack
 
@@ -62,6 +84,7 @@ npm run dev
 │   ├── layout.tsx                    # Root layout, default metadata, JSON-LD
 │   ├── page.tsx                      # Home
 │   ├── sitemap.ts                    # Public routes
+│   ├── markets/                      # Markets hub
 │   ├── ghostgauge/                   # GhostGauge product page
 │   ├── ghost-allocator/              # Ghost Allocator product page
 │   ├── trend100/                     # Trend100 product page
@@ -80,15 +103,18 @@ npm run dev
 ├── config/
 │   └── site.ts                       # siteConfig derived from lib/constants.ts
 └── lib/
-    ├── constants.ts                  # SITE_URL and EXTERNAL_LINKS (URL source of truth)
+    ├── constants.ts                  # SITE_URL and EXTERNAL_LINKS
+    ├── projects.ts                   # Current public project catalog
     ├── comingSoon.ts                 # Future projects only
+    ├── nav.ts                        # Header navigation
     ├── seo.ts                        # buildMetadata() with canonical URLs
     └── utils.ts
 ```
 
 ## Pages
 
-- `/` — Home (hero, product grid, newsletter, about)
+- `/` — Home (hero, grouped Current Work, newsletter, about)
+- `/markets` — Markets hub
 - `/ghostgauge` — GhostGauge
 - `/ghost-allocator` — Ghost Allocator (GhostRegime, GhostYield, GhostFlow preview)
 - `/trend100` — Trend100

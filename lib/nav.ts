@@ -7,12 +7,9 @@ export type NavItem = {
 };
 
 export const mainNav: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "GhostGauge", href: "/ghostgauge" },
-  { label: "Ghost Allocator", href: "/ghost-allocator" },
-  { label: "Trend100", href: "/trend100" },
-  { label: "Gridiron Edge", href: "/sports/cfb/gridiron-edge" },
+  { label: "Markets", href: "/markets" },
   { label: "Sports Lab", href: "/sports-lab" },
+  { label: "Roadmap", href: "/coming-soon" },
   { label: "About", href: "/about" },
 ];
 
@@ -28,6 +25,3 @@ export const externalNav: NavItem[] = [
     external: true,
   },
 ];
-
-
-

@@ -5,6 +5,7 @@ import { AppLink } from "@/components/ui/app-link";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS, SITE_URL } from "@/lib/constants";
+import { getProjectsByCategory } from "@/lib/projects";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -101,88 +102,76 @@ export default function PressKitPage() {
                   </li>
                 </ul>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-sm font-semibold">Products</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>
-                    <Link
-                      href={EXTERNAL_LINKS.ghostGaugeApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      GhostGauge
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={EXTERNAL_LINKS.ghostAllocatorApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      Ghost Allocator
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={EXTERNAL_LINKS.gridironEdgeApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      Gridiron Edge
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={EXTERNAL_LINKS.trend100App}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      Trend100 (app)
-                    </Link>
-                    {" · "}
-                    <AppLink
-                      href="/trend100"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      Site overview
-                    </AppLink>
-                  </li>
-                  <li>
-                    <Link
-                      href={EXTERNAL_LINKS.aceSuppressorApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      Ace Suppressor
-                    </Link>
-                    {" · "}
-                    <AppLink
-                      href="/sports/mlb/ace-suppressor"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      Site overview
-                    </AppLink>
-                    <p className="text-xs text-muted-foreground mt-0.5">
-                      MLB totals research and model-validation lab. Active research
-                      build targeting fuller 2027-season operation.
-                    </p>
-                  </li>
-                  <li>
-                    <Link
-                      href={EXTERNAL_LINKS.ghostYieldApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground underline underline-offset-2"
-                    >
-                      GhostYield (Ghost Allocator — income-sleeve research)
-                    </Link>
-                  </li>
-                </ul>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-sm font-semibold">Markets</h3>
+                  <ul className="space-y-2 text-sm">
+                    {getProjectsByCategory("markets").map((project) => (
+                      <li key={project.id}>
+                        <Link
+                          href={project.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                        >
+                          {project.name}
+                        </Link>
+                        {" · "}
+                        <AppLink
+                          href={project.internalPath}
+                          className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                        >
+                          Site overview
+                        </AppLink>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {project.shortDescription}
+                          {project.statusLabel !== "LIVE" ? ` ${project.statusLabel}.` : ""}
+                        </p>
+                        {project.id === "ghost-allocator" && (
+                          <p className="text-xs text-muted-foreground mt-0.5">
+                            GhostFlow is a public preview inside Ghost Allocator, not a separate flagship product.{" "}
+                            <Link
+                              href={EXTERNAL_LINKS.ghostFlowApp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline underline-offset-2"
+                            >
+                              Open preview
+                            </Link>
+                          </p>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-sm font-semibold">Sports</h3>
+                  <ul className="space-y-2 text-sm">
+                    {getProjectsByCategory("sports").map((project) => (
+                      <li key={project.id}>
+                        <Link
+                          href={project.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                        >
+                          {project.name}
+                        </Link>
+                        {" · "}
+                        <AppLink
+                          href={project.internalPath}
+                          className="text-muted-foreground hover:text-foreground underline underline-offset-2"
+                        >
+                          Site overview
+                        </AppLink>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {project.shortDescription}
+                          {project.status !== "LIVE" ? ` ${project.statusLabel}.` : ""}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </CardContent>

@@ -7,6 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { getHighlightItems } from "@/lib/comingSoon";
+import { getActiveResearchProjects, getLiveProjects } from "@/lib/projects";
 import { buildMetadata } from "@/lib/seo";
 import { BUILD_TIME, COMMIT_SHA, BRANCH, VERCEL_ENV } from "@/lib/buildInfo.generated";
 
@@ -36,6 +37,8 @@ function formatCommitSha(sha: string | null): string {
 
 export default function StatusPage() {
   const highlights = getHighlightItems().slice(0, 3);
+  const liveProjects = getLiveProjects();
+  const activeResearch = getActiveResearchProjects();
   const buildTimeFormatted = formatBuildTime(BUILD_TIME);
   const commitShort = formatCommitSha(COMMIT_SHA);
 
@@ -71,103 +74,44 @@ export default function StatusPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-3">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="font-semibold">GhostGauge</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Five-pillar Bitcoin risk dashboard — daily 0–100 G-Score
-                  </p>
+              {liveProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+                >
+                  <div>
+                    <h3 className="font-semibold">{project.name}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {project.shortDescription}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Button asChild size="sm" variant={project.id === "ghost-allocator" ? "default" : "outline"} className="flex-1 sm:flex-initial">
+                      <Link
+                        href={project.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open app
+                      </Link>
+                    </Button>
+                    {project.id === "ghost-allocator" && (
+                      <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
+                        <Link
+                          href={EXTERNAL_LINKS.ghostYieldApp}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GhostYield
+                        </Link>
+                      </Button>
+                    )}
+                    <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
+                      <AppLink href={project.internalPath}>Learn more</AppLink>
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
-                    <Link
-                      href={EXTERNAL_LINKS.ghostGaugeApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Open app
-                    </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
-                    <AppLink href="/ghostgauge">Learn more</AppLink>
-                  </Button>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="font-semibold">Ghost Allocator</h3>
-                  <p className="text-sm text-muted-foreground">
-                    457-aware hub: allocator, GhostRegime, GhostYield research, templates
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Button asChild size="sm" variant="default" className="flex-1 sm:flex-initial">
-                    <Link
-                      href={EXTERNAL_LINKS.ghostAllocatorApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Open app
-                    </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
-                    <Link
-                      href={EXTERNAL_LINKS.ghostYieldApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GhostYield
-                    </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
-                    <AppLink href="/ghost-allocator">Learn more</AppLink>
-                  </Button>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="font-semibold">Trend100</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Market leadership and regime dashboard: participation, heat, turbulence, plumbing
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
-                    <Link
-                      href={EXTERNAL_LINKS.trend100App}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Open app
-                    </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
-                    <AppLink href="/trend100">Learn more</AppLink>
-                  </Button>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="font-semibold">Gridiron Edge</h3>
-                  <p className="text-sm text-muted-foreground">
-                    College football analytics — 2026 season readiness
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-initial">
-                    <Link
-                      href={EXTERNAL_LINKS.gridironEdgeApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Open app
-                    </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="ghost" className="flex-1 sm:flex-initial">
-                    <AppLink href="/sports/cfb/gridiron-edge">Learn more</AppLink>
-                  </Button>
-                </div>
-              </div>
+              ))}
             </div>
           </CardContent>
         </Card>
@@ -177,34 +121,37 @@ export default function StatusPage() {
           <CardHeader>
             <CardTitle>Active Research</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-              ACTIVE RESEARCH · 2027 SEASON BUILD
-            </p>
-            <div className="flex items-start gap-3">
-              <span className="text-primary mt-0.5">▸</span>
-              <div className="flex-1 space-y-2">
-                <h3 className="font-semibold text-sm">Ace Suppressor</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  MLB totals research, daily slate ranking, backtesting, and
-                  prospective validation.
+          <CardContent className="space-y-6">
+            {activeResearch.map((project) => (
+              <div key={project.id} className="space-y-3">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                  {project.statusLabel}
                 </p>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary mt-0.5">▸</span>
+                  <div className="flex-1 space-y-2">
+                    <h3 className="font-semibold text-sm">{project.name}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.shortDescription}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild size="sm" className="w-full sm:w-auto">
+                    <Link
+                      href={project.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Open research app
+                    </Link>
+                  </Button>
+                  <Button asChild variant="ghost" size="sm" className="w-full sm:w-auto">
+                    <AppLink href={project.internalPath}>Learn more</AppLink>
+                  </Button>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <Button asChild size="sm" className="w-full sm:w-auto">
-                <Link
-                  href={EXTERNAL_LINKS.aceSuppressorApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open research app
-                </Link>
-              </Button>
-              <Button asChild variant="ghost" size="sm" className="w-full sm:w-auto">
-                <AppLink href="/sports/mlb/ace-suppressor">Learn more</AppLink>
-              </Button>
-            </div>
+            ))}
           </CardContent>
         </Card>
 

@@ -49,6 +49,7 @@ export default function Trend100Page() {
         id="jsonld-breadcrumb-trend100"
         crumbs={[
           { name: "Home", path: "/" },
+          { name: "Markets", path: "/markets" },
           { name: "Trend100", path: "/trend100" },
         ]}
       />
@@ -148,8 +149,8 @@ export default function Trend100Page() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <AppLink href="/">
-                      Back to GrayGhost Labs
+                    <AppLink href="/markets">
+                      Back to Markets
                     </AppLink>
                   </Button>
                 </div>

@@ -5,7 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { AppLink } from "@/components/ui/app-link";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
+import { getProjectById } from "@/lib/projects";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -17,6 +19,9 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function SportsLabPage() {
+  const gridiron = getProjectById("gridiron-edge");
+  const ace = getProjectById("ace-suppressor");
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -79,10 +84,17 @@ export default function SportsLabPage() {
 
           <Card className="border-2 border-primary/20">
             <CardHeader>
-              <CardTitle className="text-2xl">Gridiron Edge – College Football</CardTitle>
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <CardTitle className="text-2xl">{gridiron?.name ?? "Gridiron Edge"}</CardTitle>
+                {gridiron && (
+                  <Badge className="shrink-0 text-[10px] sm:text-xs tracking-wide">
+                    {gridiron.statusLabel}
+                  </Badge>
+                )}
+              </div>
               <CardDescription className="text-base">
-                Power ratings, matchup analysis, spreads, totals, and results
-                evaluation—active 2026 season work, not a claimed betting edge.
+                {gridiron?.shortDescription ??
+                  "College-football analytics for power ratings, matchup research, model-vs-market comparisons, and results tracking."}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -106,7 +118,7 @@ export default function SportsLabPage() {
             <CardFooter className="flex flex-col sm:flex-row gap-2">
               <Button asChild className="w-full sm:w-auto">
                 <Link
-                  href={EXTERNAL_LINKS.gridironEdgeApp}
+                  href={gridiron?.externalUrl ?? EXTERNAL_LINKS.gridironEdgeApp}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -114,7 +126,9 @@ export default function SportsLabPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full sm:w-auto">
-                <Link href="/sports/cfb/gridiron-edge">Learn more about Gridiron Edge</Link>
+                <AppLink href={gridiron?.internalPath ?? "/sports/cfb/gridiron-edge"}>
+                  Learn more about Gridiron Edge
+                </AppLink>
               </Button>
             </CardFooter>
           </Card>
@@ -122,14 +136,14 @@ export default function SportsLabPage() {
           <Card className="border-2 border-primary/20">
             <CardHeader>
               <div className="flex flex-wrap items-start justify-between gap-3">
-                <CardTitle className="text-2xl">Ace Suppressor – MLB</CardTitle>
+                <CardTitle className="text-2xl">{ace?.name ?? "Ace Suppressor"}</CardTitle>
                 <Badge variant="outline" className="shrink-0 text-[10px] sm:text-xs tracking-wide">
-                  ACTIVE RESEARCH · 2027 SEASON BUILD
+                  {ace?.statusLabel ?? "ACTIVE RESEARCH · 2027 SEASON BUILD"}
                 </Badge>
               </div>
               <CardDescription className="text-base">
-                MLB totals research, daily game ranking, historical testing, and
-                prospective model validation.
+                {ace?.shortDescription ??
+                  "MLB totals research, daily slate ranking, historical testing, and prospective model validation."}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -155,7 +169,7 @@ export default function SportsLabPage() {
             <CardFooter className="flex flex-col sm:flex-row gap-2">
               <Button asChild className="w-full sm:w-auto">
                 <Link
-                  href={EXTERNAL_LINKS.aceSuppressorApp}
+                  href={ace?.externalUrl ?? EXTERNAL_LINKS.aceSuppressorApp}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -163,9 +177,9 @@ export default function SportsLabPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full sm:w-auto">
-                <Link href="/sports/mlb/ace-suppressor">
+                <AppLink href={ace?.internalPath ?? "/sports/mlb/ace-suppressor"}>
                   Learn more about Ace Suppressor
-                </Link>
+                </AppLink>
               </Button>
             </CardFooter>
           </Card>

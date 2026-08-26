@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AppLink } from "@/components/ui/app-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -45,6 +46,7 @@ export default function GhostAllocatorPage() {
         id="jsonld-breadcrumb-ghost-allocator"
         crumbs={[
           { name: "Home", path: "/" },
+          { name: "Markets", path: "/markets" },
           { name: "Ghost Allocator", path: "/ghost-allocator" },
         ]}
       />
@@ -216,15 +218,15 @@ export default function GhostAllocatorPage() {
                 </Button>
               </div>
               <div className="mt-6">
-                <Link
-                  href="/"
+                <AppLink
+                  href="/markets"
                   className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors"
                 >
                   <span aria-hidden="true" className="mr-1">
                     ←
                   </span>
-                  Back to GrayGhost Labs
-                </Link>
+                  Back to Markets
+                </AppLink>
               </div>
             </CardContent>
           </Card>

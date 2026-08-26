@@ -34,7 +34,7 @@ export default function Home() {
     "@type": "ItemList",
     name: "GrayGhost Labs — Featured Tools",
     description:
-      "Featured tools from GrayGhost Labs across markets, crypto, and sports analytics.",
+      "Featured tools from GrayGhost Labs across markets, sports research, and the Labs roadmap.",
     url: SITE_URL,
     mainEntityOfPage: SITE_URL,
     publisher,
@@ -70,19 +70,6 @@ export default function Home() {
         position: 3,
         item: {
           "@type": "WebApplication",
-          name: "Gridiron Edge",
-          applicationCategory: "SportsApplication",
-          operatingSystem: "Any",
-          url: EXTERNAL_LINKS.gridironEdgeApp,
-          mainEntityOfPage: `${SITE_URL}/sports/cfb/gridiron-edge`,
-          publisher,
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        item: {
-          "@type": "WebApplication",
           name: "Trend100",
           applicationCategory: "FinanceApplication",
           operatingSystem: "Any",
@@ -93,7 +80,33 @@ export default function Home() {
       },
       {
         "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "WebApplication",
+          name: "Gridiron Edge",
+          applicationCategory: "SportsApplication",
+          operatingSystem: "Any",
+          url: EXTERNAL_LINKS.gridironEdgeApp,
+          mainEntityOfPage: `${SITE_URL}/sports/cfb/gridiron-edge`,
+          publisher,
+        },
+      },
+      {
+        "@type": "ListItem",
         position: 5,
+        item: {
+          "@type": "WebApplication",
+          name: "Ace Suppressor",
+          applicationCategory: "SportsApplication",
+          operatingSystem: "Any",
+          url: EXTERNAL_LINKS.aceSuppressorApp,
+          mainEntityOfPage: `${SITE_URL}/sports/mlb/ace-suppressor`,
+          publisher,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
         item: {
           "@type": "WebPage",
           name: "Coming Soon",

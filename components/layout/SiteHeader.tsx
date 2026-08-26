@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AppLink } from "@/components/ui/app-link";
 import { Menu, X } from "lucide-react";
@@ -8,8 +9,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
-        <AppLink href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">{siteConfig.name}</span>
+        <AppLink href="/" className="flex items-center gap-2 min-w-0">
+          <Image
+            src="/icons/icon-192.png"
+            alt=""
+            width={28}
+            height={28}
+            className="size-7 shrink-0 rounded-sm"
+          />
+          <span className="text-xl font-bold truncate">{siteConfig.name}</span>
         </AppLink>
 
         {/* Desktop Navigation */}

@@ -1,10 +1,22 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { AppLink } from "@/components/ui/app-link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { COMING_SOON, getHighlightItems } from "@/lib/comingSoon";
+import { getHighlightItems } from "@/lib/comingSoon";
 import { getProjectById, type Project } from "@/lib/projects";
+
+function CategoryLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <AppLink
+      href={href}
+      className="inline-flex items-center min-h-[44px] sm:min-h-0 text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+    >
+      {children}
+    </AppLink>
+  );
+}
 
 function StatusBadge({ project }: { project: Project }) {
   return (
@@ -56,7 +68,7 @@ export function ProductGrid() {
   return (
     <section
       id="ghost-products"
-      className="container px-4 py-10 sm:py-14 md:py-16 space-y-12 sm:space-y-14"
+      className="container px-4 pt-6 pb-8 sm:pt-8 sm:pb-10 md:pt-10 md:pb-12 space-y-10 sm:space-y-12"
       style={{ contentVisibility: "auto" }}
     >
       <div className="text-center space-y-3">
@@ -69,9 +81,7 @@ export function ProductGrid() {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
           <h3 className="text-2xl font-bold">Markets</h3>
-          <Button asChild variant="outline" className="w-full sm:w-auto">
-            <AppLink href="/markets">Explore Markets</AppLink>
-          </Button>
+          <CategoryLink href="/markets">Explore Markets →</CategoryLink>
         </div>
         <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {ghostGauge && (
@@ -165,9 +175,7 @@ export function ProductGrid() {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
           <h3 className="text-2xl font-bold">Sports Research</h3>
-          <Button asChild variant="outline" className="w-full sm:w-auto">
-            <AppLink href="/sports-lab">Explore Sports Lab</AppLink>
-          </Button>
+          <CategoryLink href="/sports-lab">Explore Sports Lab →</CategoryLink>
         </div>
         <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-2">
           {gridiron && (
@@ -227,30 +235,25 @@ export function ProductGrid() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-bold">On the Workbench</h3>
-        <Card>
-          <CardHeader>
-            <CardTitle>Coming soon highlights</CardTitle>
-            <CardDescription>
-              {highlights.length} of {COMING_SOON.length} future projects currently in the window.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              {highlights.map((item) => (
-                <li key={item.title} className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  <span>{item.title}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-          <CardFooter>
-            <Button asChild variant="outline" className="w-full sm:w-auto">
-              <AppLink href="/coming-soon">View Roadmap</AppLink>
-            </Button>
-          </CardFooter>
-        </Card>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <h3 className="text-2xl font-bold">On the Workbench</h3>
+          <CategoryLink href="/coming-soon">View Roadmap →</CategoryLink>
+        </div>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+          {highlights.map((item) => (
+            <Card key={item.title} className="h-full">
+              <CardHeader className="space-y-2">
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                  Concept
+                </p>
+                <CardTitle className="text-base leading-snug">{item.title}</CardTitle>
+                {item.tags[0] ? (
+                  <CardDescription>{item.tags[0]}</CardDescription>
+                ) : null}
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

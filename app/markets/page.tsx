@@ -58,8 +58,8 @@ export default function MarketsPage() {
         ]}
       />
       <div className="container px-4 py-10 sm:py-14 md:py-16">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <div className="space-y-4">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="space-y-4 max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-bold">Markets</h1>
             <p className="text-lg text-foreground/80 leading-relaxed">
               Risk, allocation, regime, and market plumbing. These are the tools
@@ -72,7 +72,7 @@ export default function MarketsPage() {
             <h2 className="text-2xl font-bold">Current tools</h2>
             <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {marketProjects.map((project) => (
-              <Card key={project.id} className="border-2 border-primary/20">
+              <Card key={project.id} className="border-2 border-primary/20 h-full flex flex-col">
                 <CardHeader>
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <CardTitle className="text-2xl">{project.name}</CardTitle>
@@ -118,7 +118,7 @@ export default function MarketsPage() {
                     </ul>
                   </CardContent>
                 )}
-                <CardFooter className="flex flex-col sm:flex-row gap-2">
+                <CardFooter className="mt-auto flex flex-col sm:flex-row gap-2">
                   <Button asChild className="w-full sm:w-auto">
                     <Link
                       href={project.externalUrl}

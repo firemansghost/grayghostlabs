@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function AboutSection() {
   return (
-    <section className="container px-4 py-10 sm:py-14 md:py-16" style={{ contentVisibility: "auto" }}>
+    <section className="container px-4 pt-8 pb-10 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16" style={{ contentVisibility: "auto" }}>
       <div className="max-w-3xl mx-auto space-y-6">
         <h2 className="text-3xl font-bold">Built because I wanted the tools myself.</h2>
         <div className="space-y-4 text-foreground/80 leading-relaxed">

@@ -74,7 +74,7 @@ export default function ComingSoonPage() {
           </p>
         </div>
 
-        {/* Filterable Projects List */}
+        {/* Roadmap families */}
         <ComingSoonList />
       </div>
     </div>

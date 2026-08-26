@@ -44,7 +44,7 @@ export function Hero() {
   const sports = getProjectsByCategory("sports");
 
   return (
-    <section className="container px-4 py-10 sm:py-14 md:py-24">
+    <section className="container px-4 pt-10 pb-8 sm:pt-14 sm:pb-10 md:pt-24 md:pb-12">
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">

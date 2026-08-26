@@ -39,7 +39,7 @@ export default function AboutPage() {
         {/* Origin Story */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Origin Story</h2>
-          <div className="space-y-4 text-foreground/80 leading-relaxed">
+          <div className="space-y-4 text-base text-foreground/80 leading-relaxed">
             <p>
               GrayGhost Labs started as my digital junkyard: a place to park
               questions that wouldn&apos;t stay inside a spreadsheet. The tools
@@ -55,9 +55,9 @@ export default function AboutPage() {
         </section>
 
         {/* Who is GrayGhost? */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">Who is GrayGhost?</h2>
-          <p className="text-sm text-muted-foreground">
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold">Who is GrayGhost?</h2>
+          <p className="text-base text-foreground/80 leading-relaxed">
             GrayGhost is the pen name for a stubborn 30+ year firefighter who
             spends off days buried in macro charts, Bitcoin data, market
             structure, portfolio research, sports models, and whatever new
@@ -66,13 +66,13 @@ export default function AboutPage() {
             spreadsheets, models, and asking why the market or the oddsmakers
             just did what they did.
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-base text-foreground/80 leading-relaxed">
             The persona is simple: take the curiosity of a markets nerd, the dark
             humor of someone who&apos;s seen too many bad days, and the skepticism
             of a noir detective who assumes every story—from governments to markets
             to models—is leaving something out.
           </p>
-          <p className="text-sm italic text-muted-foreground">
+          <p className="text-base italic text-foreground/80 leading-relaxed">
             &quot;In life, there are no black and white answers, only shades of
             gray.&quot; That&apos;s the working assumption behind GrayGhost Labs: the
             tools don&apos;t promise certainty, they just try to make the uncertainty
@@ -136,47 +136,53 @@ export default function AboutPage() {
         </section>
 
         {/* How the tools are built */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">How the tools are built</h2>
-          <p className="text-sm text-muted-foreground">
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold">How the tools are built</h2>
+          <p className="text-base text-foreground/80 leading-relaxed">
             Every project in GrayGhost Labs starts as a personal annoyance: a
             question that&apos;s hard to answer, data that&apos;s annoying to pull, or
             a problem that keeps showing up at work or in the markets. The workflow is
             the same every time:
           </p>
-          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-2">
-            <li>
-              <strong className="text-foreground/90">Start with the real question</strong>
-              {" "}
-              – What decision or uncertainty are we actually trying to understand?
-            </li>
-            <li>
-              <strong className="text-foreground/90">Collect boring, defensible data</strong>
-              {" "}
-              – Reliable inputs before clever models.
-            </li>
-            <li>
-              <strong className="text-foreground/90">Define the rules before looking at the answer</strong>
-              {" "}
-              – Avoid changing the test just because the result is inconvenient.
-            </li>
-            <li>
-              <strong className="text-foreground/90">Track the receipts</strong>
-              {" "}
-              – Backtests, prospective results, failures, missing data, and revisions.
-            </li>
-            <li>
-              <strong className="text-foreground/90">Fix it or kill it</strong>
-              {" "}
-              – If the model does not survive contact with reality, change it or retire it.
-            </li>
-            <li>
-              <strong className="text-foreground/90">UI comes last</strong>
-              {" "}
-              – A project becomes a public GrayGhost tool only after it is useful enough to earn one.
-            </li>
-          </ul>
-          <p className="text-sm text-muted-foreground">
+          <ol className="grid gap-x-8 gap-y-5 md:grid-cols-2">
+            {[
+              {
+                title: "Start with the real question",
+                body: "What decision or uncertainty are we actually trying to understand?",
+              },
+              {
+                title: "Collect boring, defensible data",
+                body: "Reliable inputs before clever models.",
+              },
+              {
+                title: "Define the rules before looking at the answer",
+                body: "Avoid changing the test just because the result is inconvenient.",
+              },
+              {
+                title: "Track the receipts",
+                body: "Backtests, prospective results, failures, missing data, and revisions.",
+              },
+              {
+                title: "Fix it or kill it",
+                body: "If the model does not survive contact with reality, change it or retire it.",
+              },
+              {
+                title: "UI comes last",
+                body: "A project becomes a public GrayGhost tool only after it is useful enough to earn one.",
+              },
+            ].map((step, index) => (
+              <li key={step.title} className="flex items-start gap-3">
+                <span className="font-mono text-sm font-semibold text-primary tabular-nums pt-0.5">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="space-y-1 min-w-0">
+                  <p className="font-semibold text-foreground leading-snug">{step.title}</p>
+                  <p className="text-base text-foreground/80 leading-relaxed">{step.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="text-base text-foreground/80 leading-relaxed">
             If something makes it onto this site, it&apos;s because it earned its
             keep first on the builder&apos;s own time and money.
           </p>
@@ -185,7 +191,7 @@ export default function AboutPage() {
         {/* Contact */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Contact</h2>
-          <p className="text-foreground/80">
+          <p className="text-base text-foreground/80 leading-relaxed">
             Find me on{" "}
             <Link
               href={EXTERNAL_LINKS.x}

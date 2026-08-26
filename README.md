@@ -53,6 +53,8 @@ The logo links home. Product URLs are unchanged.
 - `lib/comingSoon.ts` — future-project roadmap source
 - `lib/constants.ts` — `SITE_URL` and `EXTERNAL_LINKS`
 
+Maintenance / product-governance guide: [`docs/site-maintenance.md`](docs/site-maintenance.md)
+
 ## Tech Stack
 
 - **Next.js** 16 App Router (Active LTS, Turbopack by default for `next dev` and `next build`)
